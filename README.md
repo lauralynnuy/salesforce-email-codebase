@@ -9,13 +9,9 @@ The Salesforce repository for responsive email code. Use this as a starting poin
 
 ## Where to Start
 
-**`01_responsive-shell.html`** - Basic HTML email shell using media queries for [responsive behavior](https://www.salesforce.com/products/marketing-cloud/resources/email-design-toolkit/). _Media queries now supported on Gmail!_ This will render responsive in most mobile email clients. [What this means](https://litmus.com/blog/gmail-to-support-responsive-email-design). [Troubleshooting](https://emails.hteumeuleu.com/troubleshooting-gmails-responsive-design-support-ad124178bf81).
+**`responsive-shell.html`** - Basic HTML email shell using media queries for [responsive behavior](https://www.salesforce.com/products/marketing-cloud/resources/email-design-toolkit/). _Media queries now supported on Gmail!_ This will render responsive in most mobile email clients. [What this means](https://litmus.com/blog/gmail-to-support-responsive-email-design). [Troubleshooting](https://emails.hteumeuleu.com/troubleshooting-gmails-responsive-design-support-ad124178bf81).
 
-**`02_responsive-modules`** - A set of responsive email patterns (which we call modules). Use these in conjunction with `01_responsive-shell` This includes **various article styles** **Google/Web Fonts**, **image-based rounded corners for buttons** and more.
-
-**`03_hybrid-shell.html`** - An HTML email shell using the [hybrid approach](https://litmus.com/blog/understanding-responsive-and-hybrid-email-design) to reconfigure the layout for different screen sizes regardless of media query support.
-
-**`04_hybrid-modules.html`** - A hybrid version of `02_responsive-modules`. Use this in conjunction with `03_hybrid-shell` to create hybrid emails.
+**`responsive-modules`** - A set of responsive email patterns (which we call modules). Use these in conjunction with `01_responsive-shell` This includes **various article styles** **Google/Web Fonts**, **image-based rounded corners for buttons** and more.
 
 ## Clients Tested/Supported
 
@@ -28,7 +24,7 @@ Apple Mail (iOS) on iPhone ≥ 5S and iPad<br>
 Android 4.4 Native, Gmail/Inbox App (Android, iOS)<br>
 
 **`Webmail Clients`**<br>
-Gmail, Yahoo!, AOL, Outlook.com<br>
+Gmail, Yahoo!, AOL, Outlook.com, Office 365<br>
 
 ## Contributors
 
