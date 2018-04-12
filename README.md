@@ -11,7 +11,7 @@ The Salesforce repository for responsive email code. Use this as a starting poin
 
 **`responsive-shell.html`** - Basic HTML email shell using media queries for [responsive behavior](https://www.salesforce.com/products/marketing-cloud/resources/email-design-toolkit/). _Media queries now supported on Gmail!_ This will render responsive in most mobile email clients. [What this means](https://litmus.com/blog/gmail-to-support-responsive-email-design). [Troubleshooting](https://emails.hteumeuleu.com/troubleshooting-gmails-responsive-design-support-ad124178bf81).
 
-**`responsive-modules`** - A set of responsive email patterns (which we call modules). Use these in conjunction with `01_responsive-shell` This includes **various article styles** **Google/Web Fonts**, **image-based rounded corners for buttons** and more.
+**`responsive-modules`** - A set of responsive email patterns (which we call modules). Use these in conjunction with `responsive-shell` This includes **various article styles** **Google/Web Fonts**, **image-based rounded corners for buttons** and more.
 
 ## Clients Tested/Supported
 
