@@ -5,14 +5,20 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="x-apple-disable-message-reformatting">
 		<!--[if (gte mso 9)|(IE)]><xml><o:OfficeDocumentSettings><o:AllowPNG/><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml><![endif]-->
+
+		<!-- Include lines 10–18 when using web fonts. -->
+
+		<!-- Outlook-safe font override to prevent Times New Roman -->
+		<!--[if mso]><style> * { font-family: sans-serif !important; } </style><![endif]-->
+
+		<!-- Display web fonts for all non-Outlook clients  -->
+		<!--[if !mso]><!-->
+			<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700" rel="stylesheet">
+		<!--<![endif]-->
+
 		<style type="text/css">
-			/* "Fallback First" Web Font Approach */
-			@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700');
-			[style*="Playfair Display"] {
-				font-family: Playfair Display, Arial, Helvetica, sans-seif !important;
-			}
-			/* /Fallback First Web Font Approach */
 			#outlook a {
 				padding: 0;
 			}
@@ -58,6 +64,87 @@
 			}
 		</style>
 		<style>
+			body {
+				font-family: 'IBM Plex Sans', Arial, Helvetica, sans-serif; 
+			}
+			h1, h2, h3, h4, h5, p {
+				color: #000001;
+				margin: 0;
+				mso-line-height-rule: exactly;
+			}
+			h1 {
+				font-size: 32px;
+				font-weight: bold;
+				line-height: 38px;
+			}
+			h3 {
+				font-size: 22px;
+				font-weight: bold;
+				line-height: 26px;
+			}
+			p, li {
+				font-size: 18px; 
+				font-weight: normal;
+				line-height: 22px;
+				padding-top: 10px;
+			}
+			img {
+				display: block;
+			}
+			ul, ol, li {
+				Margin: 0;
+				text-align: left;
+			}
+			ul, ol {
+				Margin: 0 0 0 25px;
+				padding: 0;
+			}
+			.logo-block {
+				padding: 30px 160px;
+			}
+			.article--pad__20 {
+				padding: 20px;
+			}
+			.spacer {
+				visibility: hidden;
+			}
+			.btn--primary {
+				-webkit-border-radius: 5px; 
+				-moz-border-radius: 5px;
+				border-radius: 5px; 
+				background-color: #215ca0; 
+				color: #ffffff; 
+				font-weight: bold;
+				text-decoration: none;
+				-webkit-transition: background-color 0.1s ease-in-out;
+				-moz-transition: background-color 0.1s ease-in-out;
+				-o-transition: background-color 0.1s ease-in-out;
+				transition: background-color 0.1s ease-in-out;
+			}
+
+				.btn--primary:hover {
+					background-color: #032e61;
+				}
+			.btn-link--primary {
+				border: 1px solid #215ca0; 
+				-webkit-border-radius: 5px; 
+				-moz-border-radius: 5px; 
+				border-radius: 5px; 
+				color: #ffffff; 
+				display: block;
+				padding: 10px 25px; 
+				text-decoration: none;
+				-webkit-transition: background-color 0.1s ease-in-out;
+				-moz-transition: background-color 0.1s ease-in-out;
+				-o-transition: background-color 0.1s ease-in-out;
+				transition: background-color 0.1s ease-in-out;
+			}
+				.btn-link--primary:hover {
+					border: 1px solid #032e61;
+				}
+			.btn-pad--wide {
+				padding: 0 160px;
+			}
 			@media only screen and (max-device-width: 640px),
 			screen and (max-width: 640px) {
 				.width--100pc {
@@ -77,6 +164,7 @@
 				.display--block {
 					display: block !important;
 					width: 100% !important;
+					max-width: 100% !important;
 				}
 				.display--header {
 					display: table-header-group !important;
@@ -96,12 +184,6 @@
 					width: 100% !important;
 					height: auto !important;
 				}
-				.button__width--100pc {
-					width: 100% !important;
-					height: 44px !important;
-					line-height: 44px !important;
-					font-size: 15px !important;
-				}
 				.table__padding--mobile {
 					padding: 0 5% !important;
 				}
@@ -111,8 +193,8 @@
 				.align--left {
 					text-align: left !important;
 				}
-				.background__color--orange {
-					background-color: #e98300 !important;
+				.background__color--blue {
+					background-color:#DBEDF8 !important;
 				}
 				.background__image--mobile {
 					background-image: url(http://image.exct.net/lib/fe5c1570736306757c16/m/1/2017_codebase_imageMobile.jpg);
@@ -127,6 +209,13 @@
 				}
 			}
 		</style>
+		<!--[if gte mso 9]>
+		<style>
+			li {
+				text-indent: -1em; /* Normalise space between bullets and text */
+			}
+		</style>
+		<![endif]-->
 	</head>
 	<body style="margin: 0px; padding:0px; -webkit-text-size-adjust:none; -ms-text-size-adjust: none;">
 
@@ -143,39 +232,81 @@
 			<custom name="opencounter" type="tracking"/>
 		</div>
 
-		<table border="0" cellpadding="0" cellspacing="0" width="100%">
+		<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
 			<tr>
 				<td bgcolor="#efefef">
 					<div align="center">
-						<table border="0" cellpadding="0" cellspacing="0" width="640" bgcolor="#ffffff" class="width--100pc">
+						<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="640" bgcolor="#EFEFEF" class="width--100pc">
 							<!--%%[/* Sample Header Graphic */]%%-->
 							<tr>
-								<td width="320" align="center" valign="top" style="padding:30px 160px;" class="padding__horizontal--0">
-									<img alt="" src="https://placeholdit.imgix.net/~text?txtsize=28&bg=999999&txtclr=000000&txt=Sample_Header_Graphic&w=640&h=200" width="320" height="100" border="0" style="display:block;">
+								<td width="320" align="center" valign="top" bgcolor="#EFEFEF" class="logo-block padding__horizontal--0">
+									<img alt="" src="https://placeholdit.imgix.net/~text?txtsize=28&bg=02A1E0&txtclr=FFFFFF&txt=Sample%20Header%20Graphic&w=640&h=200" width="320" height="100" border="0">
 								</td>
 							</tr>
 							<!--%%[/* /Sample Header Graphic */]%%-->
 
+							<!--%%[/* Demo Article: Image:Scale, Alignment: Center-aligned to Left-aligned, Button: Fluid-width to Full-width */]%%-->
+							<!--%%[/* Image:Scale */]%%-->
+							<tr>
+								<td width="320" align="center" valign="top" class="padding__horizontal--0">
+									<img alt="" src="https://placeholdit.imgix.net/~text?txtsize=28&bg=036648&txtclr=FFFFFF&txt=Retina-Sized%2C%20Scaling%20Image&w=1280&h=400" width="640" height="200" border="0" class="image--scale">
+								</td>
+							</tr>
+							<!--%%[/* /Image:Scale */]%%-->
+							<tr>
+								<td width="640" align="center" valign="top" class="article--pad__20" bgcolor="#FFFFFF">
+									<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+										<!--%%[/* Alignment: Center-aligned to Left-aligned */]%%-->
+										<tr>
+											<td width="580" align="center" valign="top" class="align--left">
+												<h3>Alignment: Center-aligned to Left-aligned.</h3>
+												<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p>
+											</td>
+										</tr>
+										<!--%%[/* /Alignment: Center-aligned to Left-aligned */]%%-->
+										<!--%%[/* Spacer */]%%-->
+										<tr>
+											<td height="20" width="100%" align="center" valign="top" bgcolor="#FFFFFF" class="spacer">&nbsp;</td>
+										</tr>
+										<!--%%[/* /Spacer */]%%-->
+										<!--%%[/* Button: Fluid-width to Full-width */]%%-->
+										<tr>
+											<td align="center" valign="top">
+												<table role="presentation" border="0" cellspacing="0" cellpadding="0" class="width--100pc">
+													<tr>
+														<td align="center" bgcolor="#555555" class="btn--primary">
+															<a href="http://www.marketingcloud.com" alias="Marketing Cloud Button 4" target="_blank" class="btn-link--primary">Button: Fluid to Full-width</a>
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+										<!--%%[/* /Button: Fluid-width to Full-width */]%%-->
+									</table>
+								</td>
+							</tr>
+							<!--%%[/* /Alignment: Center-aligned to Left-aligned */]%%-->
+
 							<!--%%[/* Spacer */]%%-->
 							<tr>
-								<td height="20" width="100%" align="center" valign="top" bgcolor="#1798c1" style="font-family:Arial, Helvetica, sans-serif; font-size:20px; mso-line-height-rule:exactly; line-height:20px; color:#1798c1; font-weight:normal;">&nbsp;</td>
+								<td height="50" width="100%" align="center" valign="top" bgcolor="#EFEFEF" class="spacer">&nbsp;</td>
 							</tr>
 							<!--%%[/* /Spacer */]%%-->
 
 							<!--%%[/* Column Stack: Left Over Right */]%%-->
 							<tr>
 								<td width="640" align="center" valign="top">
-									<table border="0" cellpadding="0" cellspacing="0" width="100%">
+									<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
 										<tr>
 											<td width="320" align="center" valign="top" class="display--block">
-												<img alt="alt text" src="https://placeholdit.imgix.net/~text?txtsize=28&bg=cccccc&txtclr=000000&txt=Image01&w=320&h=200" width="320" height="200" border="0" style="display:block;" class="image--scale">
+												<img alt="alt text" src="https://placeholdit.imgix.net/~text?txtsize=28&bg=036648&txtclr=FFFFFF&txt=Image%20Left&w=320&h=200" width="320" height="200" border="0" class="image--scale">
 											</td>
-											<td width="320" align="center" valign="top" class="display--block">
-												<table border="0" cellpadding="0" cellspacing="0" width="100%">
+											<td width="320" align="center" valign="top" class="display--block" bgcolor="#FFFFFF">
+												<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
 													<tr>
-														<td width="300" align="left" valign="top" style="padding:10px; font-family:Arial, Helvetica, sans-serif; font-size:18px; line-height:22px; mso-line-height-rule:exactly; color:#000001; font-weight:normal;">
-															<span style="font-weight:bold;">Column Stack: Left Over Right.</span>
-															<br> Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+														<td align="left" valign="top" class="article--pad__20">
+															<h3>Column Stack: Left Over Right.</h3>
+															<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
 														</td>
 													</tr>
 												</table>
@@ -188,25 +319,24 @@
 
 							<!--%%[/* Spacer */]%%-->
 							<tr>
-								<td height="20" width="100%" align="center" valign="top" bgcolor="#1798c1" style="font-family:Arial, Helvetica, sans-serif; font-size:20px; mso-line-height-rule:exactly; line-height:20px; color:#1798c1; font-weight:normal;">&nbsp;</td>
+								<td height="50" width="100%" align="center" valign="top" bgcolor="#EFEFEF" class="spacer">&nbsp;</td>
 							</tr>
 							<!--%%[/* /Spacer */]%%-->
 
 							<!--%%[/* Column Stack: Right Over Left */]%%-->
 							<tr>
 								<td width="640" align="center" valign="top" dir="rtl">
-									<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+									<table role="presentation" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
 										<tr>
 											<td width="320" align="center" valign="top" dir="ltr" class="display--block">
-												<img alt="alt text" src="https://placeholdit.imgix.net/~text?txtsize=28&bg=555555&txtclr=ffffff&txt=Image02&w=320&h=200" width="320" height="200" border="0" style="display:block;" class="image--scale">
+												<img alt="alt text" src="https://placeholdit.imgix.net/~text?txtsize=28&bg=036648&txtclr=FFFFFF&txt=Image%20Right&w=320&h=200" width="320" height="200" border="0" class="image--scale">
 											</td>
-											<td width="320" align="center" valign="top" dir="ltr" class="display--block">
-												<table border="0" cellpadding="0" cellspacing="0" width="100%">
+											<td width="320" align="center" valign="top" dir="ltr" class="display--block" bgcolor="#FFFFFF">
+												<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
 													<tr>
-														<td width="300" align="left" valign="top" style="padding:10px; font-family:Arial, Helvetica, sans-serif; font-size:18px; line-height:22px; mso-line-height-rule:exactly; color:#000001; font-weight:normal;">
+														<td align="left" valign="top" class="article--pad__20">
 															<h3>Column Stack: Right Over Left.</h3>
-															<span style="font-weight:bold;">Column Stack: Right Over Left.</span>
-															<br> Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+															<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
 														</td>
 													</tr>
 												</table>
@@ -219,21 +349,17 @@
 
 							<!--%%[/* Spacer */]%%-->
 							<tr>
-								<td height="20" width="100%" align="center" valign="top" bgcolor="#1798c1" style="font-family:Arial, Helvetica, sans-serif; font-size:20px; mso-line-height-rule:exactly; line-height:20px; color:#1798c1; font-weight:normal;">&nbsp;</td>
+								<td height="50" width="100%" align="center" valign="top" bgcolor="#EFEFEF" class="spacer">&nbsp;</td>
 							</tr>
 							<!--%%[/* /Spacer */]%%-->
 
 							<!--%%[/* Button: Fixed-width */]%%-->
 							<tr>
-								<td width="300" align="center" valign="top" style="padding:0 170px;" class="padding__horizontal--0">
-									<table border="0" cellpadding="0" cellspacing="0" width="300">
+								<td width="320" align="center" valign="top" class="padding__horizontal--0 btn-pad--wide">
+									<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="320">
 										<tr>
-											<td width="300" align="center" valign="middle" height="47" bgcolor="#555555" style="-webkit-border-radius: 15px; -moz-border-radius: 15px; border-radius: 15px;">
-												<a href="http://www.marketingcloud.com" alias="Marketing Cloud Button" target="_blank" style="font-family:Arial, Helvetica, sans-serif; font-size:18px; line-height:47px; color:#ffffff; font-weight:bold; text-decoration:none; width:100%; display:inline-block;">
-										            <span style="color:#ffffff; text-decoration:none; font-weight:bold">
-										            	Button: Fixed-width
-										            </span>
-										        </a>
+											<td width="320" align="center" valign="middle" height="47" bgcolor="#555555" class="btn--primary">
+												<a href="http://www.marketingcloud.com" alias="Marketing Cloud Button" target="_blank" class="btn-link--primary">Button: Fixed-width</a>
 											</td>
 										</tr>
 									</table>
@@ -243,21 +369,17 @@
 
 							<!--%%[/* Spacer */]%%-->
 							<tr>
-								<td height="20" width="100%" align="center" valign="top" bgcolor="#1798c1" style="font-family:Arial, Helvetica, sans-serif; font-size:20px; mso-line-height-rule:exactly; line-height:20px; color:#1798c1; font-weight:normal;">&nbsp;</td>
+								<td height="50" width="100%" align="center" valign="top" bgcolor="#EFEFEF" class="spacer">&nbsp;</td>
 							</tr>
 							<!--%%[/* /Spacer */]%%-->
 
 							<!--%%[/* Button: Fixed-width to Full-width */]%%-->
 							<tr>
-								<td width="320" align="center" valign="top" style="padding:0 160px;" class="padding__horizontal--0">
-									<table border="0" cellpadding="0" cellspacing="0" width="100%">
+								<td width="320" align="center" valign="top" class="padding__horizontal--0 btn-pad--wide">
+									<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
 										<tr>
-											<td width="320" align="center" valign="middle" height="47" bgcolor="#555555" style="-webkit-border-radius: 15px; -moz-border-radius: 15px; border-radius: 15px;" class="button__width--100pc">
-												<a href="http://www.marketingcloud.com" alias="Marketing Cloud Button 2" target="_blank" style="font-family:Arial, Helvetica, sans-serif; font-size:18px; line-height:47px; mso-line-height-rule:exactly; color:#ffffff; font-weight:bold; text-decoration:none; width:100%; display:inline-block;">
-										            <span style="color:#ffffff; text-decoration:none; font-weight:bold">
-										            	Button: Fixed-width to Full-width
-										            </span>
-									            </a>
+											<td width="320" align="center" valign="middle" height="47" bgcolor="#555555" class="width--100pc btn--primary">
+												<a href="http://www.marketingcloud.com" alias="Marketing Cloud Button 2" target="_blank" class="btn-link--primary">Button: Fixed-width to Full-width</a>
 											</td>
 										</tr>
 									</table>
@@ -267,19 +389,17 @@
 
 							<!--%%[/* Spacer */]%%-->
 							<tr>
-								<td height="20" width="100%" align="center" valign="top" bgcolor="#1798c1" style="font-family:Arial, Helvetica, sans-serif; font-size:20px; mso-line-height-rule:exactly; line-height:20px; color:#1798c1; font-weight:normal;">&nbsp;</td>
+								<td height="50" width="100%" align="center" valign="top" bgcolor="#EFEFEF" class="spacer">&nbsp;</td>
 							</tr>
 							<!--%%[/* /Spacer */]%%-->
 
 							<!--%%[/* Button: Fluid-width */]%%-->
 							<tr>
 								<td align="center" valign="top" class="padding__horizontal--0">
-									<table border="0" cellspacing="0" cellpadding="0">
+									<table role="presentation" border="0" cellspacing="0" cellpadding="0">
 										<tr>
-											<td align="center" bgcolor="#555555" style="-webkit-border-radius: 15px; -moz-border-radius: 15px; border-radius: 15px; font-weight: bold; color: #ffffff; text-decoration: none;">
-												<a href="http://www.marketingcloud.com" alias="Marketing Cloud Button 3" target="_blank" style="font-size: 18px; font-family: Arial, sans-serif; font-weight: bold; color: #ffffff; text-decoration: none; padding: 10px 15px; border: 1px solid #555555; -webkit-border-radius: 15px; -moz-border-radius: 15px; border-radius: 15px; display: block;">
-												Button: Fluid-width
-											</a>
+											<td align="center" bgcolor="#555555" class="btn--primary">
+												<a href="http://www.marketingcloud.com" alias="Marketing Cloud Button 3" target="_blank" class="btn-link--primary">Button: Fluid-width</a>
 											</td>
 										</tr>
 									</table>
@@ -289,19 +409,17 @@
 
 							<!--%%[/* Spacer */]%%-->
 							<tr>
-								<td height="20" width="100%" align="center" valign="top" bgcolor="#1798c1" style="font-family:Arial, Helvetica, sans-serif; font-size:20px; mso-line-height-rule:exactly; line-height:20px; color:#1798c1; font-weight:normal;">&nbsp;</td>
+								<td height="50" width="100%" align="center" valign="top" bgcolor="#EFEFEF" class="spacer">&nbsp;</td>
 							</tr>
 							<!--%%[/* /Spacer */]%%-->
 
 							<!--%%[/* Button: Fluid-width to Full-width */]%%-->
 							<tr>
-								<td align="center" valign="top" class="padding__horizontal--0">
-									<table border="0" cellspacing="0" cellpadding="0" class="width--100pc">
+								<td align="center" valign="top">
+									<table role="presentation" border="0" cellspacing="0" cellpadding="0" class="width--100pc">
 										<tr>
-											<td align="center" bgcolor="#555555" style="-webkit-border-radius: 15px; -moz-border-radius: 15px; border-radius: 15px; font-weight: bold; color: #ffffff; text-decoration: none;">
-												<a href="http://www.marketingcloud.com" alias="Marketing Cloud Button 4" target="_blank" style="font-size: 18px; font-family: Arial, sans-serif; font-weight: bold; color: #ffffff; text-decoration: none; padding: 10px 15px; border: 1px solid #555555; -webkit-border-radius: 15px; -moz-border-radius: 15px; border-radius: 15px; display: block;">
-												Button: Fluid-width to Full-width
-											</a>
+											<td align="center" bgcolor="#555555" class="btn--primary">
+												<a href="http://www.marketingcloud.com" alias="Marketing Cloud Button 4" target="_blank" class="btn-link--primary">Button: Fluid to Full-width</a>
 											</td>
 										</tr>
 									</table>
@@ -311,77 +429,75 @@
 
 							<!--%%[/* Spacer */]%%-->
 							<tr>
-								<td height="20" width="100%" align="center" valign="top" bgcolor="#1798c1" style="font-family:Arial, Helvetica, sans-serif; font-size:20px; mso-line-height-rule:exactly; line-height:20px; color:#1798c1; font-weight:normal;">&nbsp;</td>
+								<td height="50" width="100%" align="center" valign="top" bgcolor="#EFEFEF" class="spacer">&nbsp;</td>
 							</tr>
 							<!--%%[/* /Spacer */]%%-->
 
 							<!--%%[/* Image: Scale */]%%-->
 							<tr>
 								<td width="320" align="center" valign="top" style="padding:0 160px;" class="padding__horizontal--0">
-									<img alt="" src="https://placeholdit.imgix.net/~text?txtsize=28&bg=999999&txtclr=000000&txt=Scaling_Image&w=640&h=400" width="320" height="200" border="0" style="display:block;" class="image--scale">
+									<img alt="" src="https://placeholdit.imgix.net/~text?txtsize=28&bg=036648&txtclr=FFFFFF&txt=Scaling%20Image&w=640&h=400" width="320" height="200" border="0" class="image--scale">
 								</td>
 							</tr>
 							<!--%%[/* /Image: Scale */]%%-->
 
 							<!--%%[/* Spacer */]%%-->
 							<tr>
-								<td height="20" width="100%" align="center" valign="top" bgcolor="#1798c1" style="font-family:Arial, Helvetica, sans-serif; font-size:20px; mso-line-height-rule:exactly; line-height:20px; color:#1798c1; font-weight:normal;">&nbsp;</td>
+								<td height="50" width="100%" align="center" valign="top" bgcolor="#EFEFEF" class="spacer">&nbsp;</td>
 							</tr>
 							<!--%%[/* /Spacer */]%%-->
 
 							<!--%%[/* Image: Persistent Dimensions */]%%-->
 							<tr>
 								<td width="320" align="center" valign="top" style="padding:0 160px;" class="padding__horizontal--0">
-									<img alt="" src="https://placeholdit.imgix.net/~text?txtsize=28&bg=999999&txtclr=000000&txt=Persistent_Dimensions_Image&w=640&h=400" width="320" height="200" border="0" style="display:block;">
+									<img alt="" src="https://placeholdit.imgix.net/~text?txtsize=28&bg=036648&txtclr=FFFFFF&txt=Persistent%20Dimensions%20Image&w=640&h=400" width="320" height="200" border="0">
 								</td>
 							</tr>
 							<!--%%[/* /Image: Persistent Dimensions */]%%-->
 
 							<!--%%[/* Spacer */]%%-->
 							<tr>
-								<td height="20" width="100%" align="center" valign="top" bgcolor="#1798c1" style="font-family:Arial, Helvetica, sans-serif; font-size:20px; mso-line-height-rule:exactly; line-height:20px; color:#1798c1; font-weight:normal;">&nbsp;</td>
+								<td height="50" width="100%" align="center" valign="top" bgcolor="#EFEFEF" class="spacer">&nbsp;</td>
 							</tr>
 							<!--%%[/* /Spacer */]%%-->
 
-							<!--%%[/* Table: Persistent */]%%-->
+							<!--%%[/* Text: Semantic Bulleted List */]%%-->
 							<tr>
-								<td width="520" align="left" valign="top" style="padding:0 85px 0 35px;" class="table__padding--mobile">
-									<table border="0" cellpadding="0" cellspacing="0" width="100%">
+								<td width="640" align="center" valign="top" class="article--pad__20" bgcolor="#FFFFFF">
+									<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
 										<tr>
-											<td width="50" align="center" valign="top" style="font-family:Arial, Helvetica, sans-serif; font-size:30px; line-height:36px; mso-line-height-rule:exactly; color:#000001; font-weight:bold;">&bull;</td>
-											<td width="470" align="left" valign="top" style="font-family:Arial, Helvetica, sans-serif; font-size:18px; line-height:36px; mso-line-height-rule:exactly; color:#000001; font-weight:bold;">Persistent Table</td>
-										</tr>
-										<tr>
-											<td width="50" align="center" valign="top" style="font-family:Arial, Helvetica, sans-serif; font-size:30px; line-height:36px; mso-line-height-rule:exactly; color:#000001; font-weight:bold;">&bull;</td>
-											<td width="470" align="left" valign="top" style="font-family:Arial, Helvetica, sans-serif; font-size:18px; line-height:36px; mso-line-height-rule:exactly; color:#000001; font-weight:normal;">Et malesuada fames ac turpis egestas. Vestibulum tortor quam</td>
-										</tr>
-										<tr>
-											<td width="50" align="center" valign="top" style="font-family:Arial, Helvetica, sans-serif; font-size:30px; line-height:36px; mso-line-height-rule:exactly; color:#000001; font-weight:bold;">&bull;</td>
-											<td width="470" align="left" valign="top" style="font-family:Arial, Helvetica, sans-serif; font-size:18px; line-height:36px; mso-line-height-rule:exactly; color:#000001; font-weight:normal;">Feugiat vitae, ultricies eget, tempor sit amet, ante. Donec</td>
+											<td valign="top" align="left">
+												<h3>Semantic Bulleted List</h3>
+												<ul>
+													<li>This list</li>
+													<li>Will look the same</li>
+													<li>Across all mail clients</li>
+												</ul>
+											</td>
 										</tr>
 									</table>
 								</td>
 							</tr>
-							<!--%%[/* /Table: Persistent */]%%-->
+							<!--%%[/* /Text: Semantic Bulleted List */]%%-->
 
 							<!--%%[/* Spacer */]%%-->
 							<tr>
-								<td height="20" width="100%" align="center" valign="top" bgcolor="#1798c1" style="font-family:Arial, Helvetica, sans-serif; font-size:20px; mso-line-height-rule:exactly; line-height:20px; color:#1798c1; font-weight:normal;">&nbsp;</td>
+								<td height="50" width="100%" align="center" valign="top" bgcolor="#EFEFEF" class="spacer">&nbsp;</td>
 							</tr>
 							<!--%%[/* /Spacer */]%%-->
 
 							<!--%%[/* Alignment: Left-aligned to Center-aligned */]%%-->
 							<tr>
-								<td width="580" align="left" valign="top" style="padding:0px 30px; font-family:Arial, Helvetica, sans-serif; font-size:18px; line-height:22px; mso-line-height-rule:exactly; color:#000001; font-weight:normal;" class="align--center padding__horizontal--5pc">
-									<span style="font-weight:bold;">Alignment: Left-aligned to Center-aligned.</span>
-									<br> Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.
+								<td width="640" align="left" valign="top" class="article--bg__white article--pad__20">
+									<h3>Alignment: Left-aligned to Center-aligned.</h3>
+									<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p>
 								</td>
 							</tr>
 							<!--%%[/* /Alignment: Left-aligned to Center-aligned */]%%-->
 
 							<!--%%[/* Spacer */]%%-->
 							<tr>
-								<td height="20" width="100%" align="center" valign="top" bgcolor="#1798c1" style="font-family:Arial, Helvetica, sans-serif; font-size:20px; mso-line-height-rule:exactly; line-height:20px; color:#1798c1; font-weight:normal;">&nbsp;</td>
+								<td height="50" width="100%" align="center" valign="top" bgcolor="#EFEFEF" class="spacer">&nbsp;</td>
 							</tr>
 							<!--%%[/* /Spacer */]%%-->
 
@@ -396,54 +512,48 @@
 
 							<!--%%[/* Spacer */]%%-->
 							<tr>
-								<td height="20" width="100%" align="center" valign="top" bgcolor="#1798c1" style="font-family:Arial, Helvetica, sans-serif; font-size:20px; mso-line-height-rule:exactly; line-height:20px; color:#1798c1; font-weight:normal;">&nbsp;</td>
+								<td height="50" width="100%" align="center" valign="top" bgcolor="#EFEFEF" class="spacer">&nbsp;</td>
 							</tr>
 							<!--%%[/* /Spacer */]%%-->
 
 							<!--%%[/* Show on mobile */]%%-->
 							<!--[if !mso]><!-- -->
 							<tr>
-								<td bgcolor="#1798c1" style="font-size:0%; line-height: 0px; padding:0;">
+								<td bgcolor="#EFEFEF" style="font-size:0%; line-height: 0px; padding:0;">
 									<div class="block--show" style="font-size:0%; max-height: 0; overflow: hidden; display: none">
-										<img alt="" src="https://placeholdit.imgix.net/~text?txtsize=28&bg=999999&txtclr=000000&txt=Mobile--Show_Scaling_Image&w=640&h=400" width="" height="" border="0" style="display:block;" class="image--scale">
+										<img alt="" src="https://placeholdit.imgix.net/~text?txtsize=28&bg=036648&txtclr=FFFFFF&txt=Mobile--Show_Scaling_Image&w=640&h=400" width="" height="" border="0" class="image--scale">
 									</div>
 								</td>
 							</tr>
 							<!--<![endif]-->
 							<!--%%[/* /Show on mobile */]%%-->
 
-							<!--%%[/* Spacer */]%%-->
-							<tr>
-								<td height="20" width="100%" align="center" valign="top" bgcolor="#1798c1" style="font-family:Arial, Helvetica, sans-serif; font-size:20px; mso-line-height-rule:exactly; line-height:20px; color:#1798c1; font-weight:normal;">&nbsp;</td>
-							</tr>
-							<!--%%[/* /Spacer */]%%-->
-
 							<!--%%[/* Hide on mobile */]%%-->
 							<tr>
 								<td width="640" align="center" valign="top" class="block--hide">
-									<img alt="" src="https://placeholdit.imgix.net/~text?txtsize=28&bg=999999&txtclr=000000&txt=Mobile--Hide_Image&w=640&h=400" width="640" height="400" border="0" style="display:block;">
+									<img alt="" src="https://placeholdit.imgix.net/~text?txtsize=28&bg=036648&txtclr=FFFFFF&txt=Mobile--Hide_Image&w=640&h=400" width="640" height="400" border="0">
 								</td>
 							</tr>
 							<!--%%[/* /Hide on mobile */]%%-->
 
 							<!--%%[/* Spacer */]%%-->
 							<tr>
-								<td height="20" width="100%" align="center" valign="top" bgcolor="#1798c1" style="font-family:Arial, Helvetica, sans-serif; font-size:20px; mso-line-height-rule:exactly; line-height:20px; color:#1798c1; font-weight:normal;">&nbsp;</td>
+								<td height="50" width="100%" align="center" valign="top" bgcolor="#EFEFEF" class="spacer">&nbsp;</td>
 							</tr>
 							<!--%%[/* /Spacer */]%%-->
 
 							<!--%%[/* Background: Color Change */]%%-->
 							<tr>
-								<td width="620" align="left" valign="top" bgcolor="#666666" style="padding:10px; font-family:Arial, Helvetica, sans-serif; font-size:18px; line-height:22px; mso-line-height-rule:exactly; color:#ffffff; font-weight:normal;" class="background__color--orange">
-									<span style="font-weight:bold;">Grey background color on desktop; Orange background color on mobile.</span>
-									<br><br> Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.
+								<td width="620" align="left" valign="top" class="article--pad__20 background__color--blue" bgcolor="#FFFFFF">
+									<h3>White background color on desktop; blue background color on mobile.</h3>
+									<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p>
 								</td>
 							</tr>
 							<!--%%[/* /Background: Color Change */]%%-->
 
 							<!--%%[/* Spacer */]%%-->
 							<tr>
-								<td height="20" width="100%" align="center" valign="top" bgcolor="#1798c1" style="font-family:Arial, Helvetica, sans-serif; font-size:20px; mso-line-height-rule:exactly; line-height:20px; color:#1798c1; font-weight:normal;">&nbsp;</td>
+								<td height="50" width="100%" align="center" valign="top" bgcolor="#EFEFEF" class="spacer">&nbsp;</td>
 							</tr>
 							<!--%%[/* /Spacer */]%%-->
 
@@ -456,7 +566,7 @@
 								    <v:textbox inset="0,0,0,0">
 									<![endif]-->
 									<div>
-										<table border="0" cellpadding="0" cellspacing="0" width="100%">
+										<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
 											<tr>
 												<td width="640" height="300" align="center" valign="middle" style="font-family:Arial, Helvetica, sans-serif; font-size:18px; line-height:22px; mso-line-height-rule:exactly; color:#ffffff; font-weight:normal; text-shadow:1px 1px #000001">
 													<span style="font-weight:bold;">Background image change. </span>
@@ -475,48 +585,14 @@
 
 							<!--%%[/* Spacer */]%%-->
 							<tr>
-								<td height="20" width="100%" align="center" valign="top" bgcolor="#1798c1" style="font-family:Arial, Helvetica, sans-serif; font-size:20px; mso-line-height-rule:exactly; line-height:20px; color:#1798c1; font-weight:normal;">&nbsp;</td>
-							</tr>
-							<!--%%[/* /Spacer */]%%-->
-
-							<!--%%[/* Web Font; Note the @import and selector on lines 11-17. */]%%-->
-							<tr>
-								<td width="100%" align="center" valign="top" style="font-family:Arial, Helvetica, sans-serif,'Playfair Display'; font-size:20px; line-height:24px; mso-line-height-rule:exactly; color:#555555; font-weight:normal;">
-									Font weight: normal
-								</td>
-							</tr>
-							<tr>
-								<td width="100%" align="center" valign="top" style="font-family:Arial, Helvetica, sans-serif,'Playfair Display'; font-size:20px; line-height:24px; mso-line-height-rule:exactly; color:#555555; font-weight:bold;">
-									Font weight: bold
-								</td>
-							</tr>
-							<tr>
-								<td width="100%" align="center" valign="top" style="font-family:Arial, Helvetica, sans-serif,'Playfair Display'; font-size:20px; line-height:24px; mso-line-height-rule:exactly; color:#555555; font-weight:normal; text-decoration:underline;">
-									Text decoration: underlined
-								</td>
-							</tr>
-							<tr>
-								<td width="100%" align="center" valign="top" style="font-family:Arial, Helvetica, sans-serif,'Playfair Display'; font-size:20px; line-height:24px; mso-line-height-rule:exactly; color:#555555; font-weight:normal; font-style:italic;">
-									Font style: italic
-								</td>
-							</tr>
-							<tr>
-								<td width="100%" align="center" valign="top" style="font-family:Arial, Helvetica, sans-serif; font-size:20px; line-height:24px; mso-line-height-rule:exactly; color:#555555; font-weight:normal;">
-									Font: Arial
-								</td>
-							</tr>
-							<!--%%[/* /Web Font; Note the @import and selector on lines 11-17. */]%%-->
-
-							<!--%%[/* Spacer */]%%-->
-							<tr>
-								<td height="20" width="100%" align="center" valign="top" bgcolor="#1798c1" style="font-family:Arial, Helvetica, sans-serif; font-size:20px; mso-line-height-rule:exactly; line-height:20px; color:#1798c1; font-weight:normal;">&nbsp;</td>
+								<td height="50" width="100%" align="center" valign="top" bgcolor="#EFEFEF" class="spacer">&nbsp;</td>
 							</tr>
 							<!--%%[/* /Spacer */]%%-->
 
 							<!--%%[/* Button: Left-aligned to Center-aligned */]%%-->
 							<tr>
 								<td align="left" valign="top" class="align--center">
-									<table border="0" cellspacing="0" cellpadding="0" class="width--100pc">
+									<table role="presentation" border="0" cellspacing="0" cellpadding="0" class="width--100pc">
 										<tr>
 											<td align="center" bgcolor="#555555" style="-webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;" class="display--inline-block">
 												<!--%%[/* Remove class to create full-width button" */]%%-->
@@ -532,7 +608,7 @@
 
 							<!--%%[/* Spacer */]%%-->
 							<tr>
-								<td height="20" width="100%" align="center" valign="top" bgcolor="#1798c1" style="font-family:Arial, Helvetica, sans-serif; font-size:20px; mso-line-height-rule:exactly; line-height:20px; color:#1798c1; font-weight:normal;">&nbsp;</td>
+								<td height="50" width="100%" align="center" valign="top" bgcolor="#EFEFEF" class="spacer">&nbsp;</td>
 							</tr>
 							<!--%%[/* /Spacer */]%%-->
 
@@ -545,10 +621,10 @@
 								    <v:textbox inset="0,0,0,0">
 									<![endif]-->
 									<div>
-										<table border="0" cellpadding="0" cellspacing="0" width="100%">
+										<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
 											<tr>
 												<td align="center" valign="top" class="align__vertical--middle">
-													<table border="0" cellspacing="0" cellpadding="0">
+													<table role="presentation" border="0" cellspacing="0" cellpadding="0">
 														<tr>
 															<td align="left" valign="top" style="font-family:Arial, Helvetica, sans-serif; font-size:15px; line-height:130px; mso-line-height-rule:exactly; color:#000001; font-weight:normal;" class="block--hide">&nbsp;</td>
 														</tr>
@@ -574,18 +650,18 @@
 
 							<!--%%[/* Spacer */]%%-->
 							<tr>
-								<td height="20" width="100%" align="center" valign="top" bgcolor="#1798c1" style="font-family:Arial, Helvetica, sans-serif; font-size:20px; mso-line-height-rule:exactly; line-height:20px; color:#1798c1; font-weight:normal;">&nbsp;</td>
+								<td height="50" width="100%" align="center" valign="top" bgcolor="#EFEFEF" class="spacer">&nbsp;</td>
 							</tr>
 							<!--%%[/* /Spacer */]%%-->
 
 							<!--%%[/* Button: Image Edges*/]%%-->
 							<tr>
 								<td align="center" valign="top">
-									<table border="0" cellpadding="0" cellspacing="0">
+									<table role="presentation" border="0" cellpadding="0" cellspacing="0">
 										<tr>
 											<td width="5" align="left" valign="top">
 												<a href="http://www.marketingcloud.com" alias="Marketing Cloud Button 3 Left Edge" target="_blank" style="text-decoration:none;">
-												<img alt="" src="http://image.exct.net/lib/fe5c1570736306757c16/m/1/2017_codebase_buttonLeft_1.png" width="5" height="47" border="0" style="display:block;">
+												<img alt="" src="http://image.exct.net/lib/fe5c1570736306757c16/m/1/2017_codebase_buttonLeft_1.png" width="5" height="47" border="0">
 											</a>
 											</td>
 											<td width="184" align="center" valign="middle" bgcolor="#555555" style="font-family:Arial, Helvetica, sans-serif; color:#ffffff; font-weight:bold;">
@@ -593,7 +669,7 @@
 											</td>
 											<td width="5" align="left" valign="top">
 												<a href="http://www.marketingcloud.com" alias="Marketing Cloud Button 3 Right Edge" target="_blank" style="text-decoration:none;">
-												<img alt="" src="http://image.exct.net/lib/fe5c1570736306757c16/m/1/2017_codebase_buttonRight_1.png" width="5" height="47" border="0" style="display:block;">
+												<img alt="" src="http://image.exct.net/lib/fe5c1570736306757c16/m/1/2017_codebase_buttonRight_1.png" width="5" height="47" border="0">
 											</a>
 											</td>
 										</tr>
@@ -604,23 +680,23 @@
 
 							<!--%%[/* Spacer */]%%-->
 							<tr>
-								<td height="20" width="100%" align="center" valign="top" bgcolor="#1798c1" style="font-family:Arial, Helvetica, sans-serif; font-size:20px; mso-line-height-rule:exactly; line-height:20px; color:#1798c1; font-weight:normal;">&nbsp;</td>
+								<td height="50" width="100%" align="center" valign="top" bgcolor="#EFEFEF" class="spacer">&nbsp;</td>
 							</tr>
 							<!--%%[/* /Spacer */]%%-->
 
 							<!--%%[/* Button: Image Edges and Background Gradient*/]%%-->
 							<tr>
 								<td align="center" valign="middle">
-									<table border="0" cellpadding="0" cellspacing="0">
+									<table role="presentation" border="0" cellpadding="0" cellspacing="0">
 										<tr>
 											<td width="5" align="left" valign="middle" style="background-image:url('http://image.exct.net/lib/fe5c1570736306757c16/m/1/2017_codebase_buttonBgLeft_1.png'); background-size:5px 47px; background-repeat:no-repeat; font-family:Arial, Helvetica, sans-serif; font-size:12px; line-height:47px; mso-line-height-rule:exactly; color:#555555; font-weight:normal;">
-												<img alt="" src="http://image.exct.net/lib/fe5c1570736306757c16/m/1/spacer.png" width="1" height="1" border="0" style="display:block;">
+												<img alt="" src="http://image.exct.net/lib/fe5c1570736306757c16/m/1/spacer.png" width="1" height="1" border="0">
 											</td>
 											<td width="184" align="center" valign="middle" bgcolor="#555555" height="47" style="font-family:Arial, Helvetica, sans-serif; color:#ffffff; font-weight:bold; background-image:url('http://image.exct.net/lib/fe5c1570736306757c16/m/1/2017_codebase_buttonBg_1.png'); background-size:184px 47px; background-repeat:no-repeat;">
 												<a href="http://www.marketingcloud.com" alias="Marketing Cloud Button 3" target="_blank" style="font-size:18px; line-height:44px; mso-line-height-rule:exactly; color:#ffffff; font-weight:bold; text-decoration:none; display:block;"><span style="color:#ffffff; font-weight:bold; text-decoration:none;">Marketing Cloud</span></a>
 											</td>
 											<td width="5" align="left" valign="middle" style="background-image:url('http://image.exct.net/lib/fe5c1570736306757c16/m/1/2017_codebase_buttonBgRight_1.png'); background-size:5px 47px; background-repeat:no-repeat; font-family:Arial, Helvetica, sans-serif; font-size:12px; line-height:12px; mso-line-height-rule:exactly; color:#555555; font-weight:normal;">
-												<img alt="" src="http://image.exct.net/lib/fe5c1570736306757c16/m/1/spacer.png" width="1" height="1" border="0" style="display:block;">
+												<img alt="" src="http://image.exct.net/lib/fe5c1570736306757c16/m/1/spacer.png" width="1" height="1" border="0">
 											</td>
 										</tr>
 									</table>
@@ -630,7 +706,7 @@
 
 							<!--%%[/* Spacer */]%%-->
 							<tr>
-								<td height="20" width="100%" align="center" valign="top" bgcolor="#1798c1" style="font-family:Arial, Helvetica, sans-serif; font-size:20px; mso-line-height-rule:exactly; line-height:20px; color:#1798c1; font-weight:normal;">&nbsp;</td>
+								<td height="50" width="100%" align="center" valign="top" bgcolor="#EFEFEF" class="spacer">&nbsp;</td>
 							</tr>
 							<!--%%[/* /Spacer */]%%-->
 
