@@ -82,11 +82,13 @@
 				font-weight: bold;
 				line-height: 26px;
 			}
-			p, li {
+			p, li, a {
 				font-size: 18px; 
-				font-weight: normal;
 				line-height: 22px;
 				padding-top: 10px;
+			}
+			a {
+				font-weight: bold;
 			}
 			img {
 				display: block;
@@ -102,13 +104,13 @@
 			.logo-block {
 				padding: 30px 160px;
 			}
-			.article--pad__20 {
+			.padding_20 {
 				padding: 20px;
 			}
 			.spacer {
 				visibility: hidden;
 			}
-			.btn--primary {
+			.btn-primary {
 				-webkit-border-radius: 5px; 
 				-moz-border-radius: 5px;
 				border-radius: 5px; 
@@ -122,10 +124,10 @@
 				transition: background-color 0.1s ease-in-out;
 			}
 
-				.btn--primary:hover {
+				.btn-primary:hover {
 					background-color: #032e61;
 				}
-			.btn-link--primary {
+			.btn-link-primary {
 				border: 1px solid #215ca0; 
 				-webkit-border-radius: 5px; 
 				-moz-border-radius: 5px; 
@@ -139,18 +141,44 @@
 				-o-transition: background-color 0.1s ease-in-out;
 				transition: background-color 0.1s ease-in-out;
 			}
-				.btn-link--primary:hover {
+				.btn-link-primary:hover {
 					border: 1px solid #032e61;
 				}
-			.btn-pad--wide {
-				padding: 0 160px;
+			.pad-wide {
+				padding: 0 120px;
+			}
+			.block-show {
+				font-size: 0%;
+				max-height: 0;
+				overflow: hidden;
+				display: none;
+			}
+			.background_image {
+				background-color: #333333;
+				background-image: url('http://image.s4.exct.net/lib/fe9215737c61027f76/m/1/1149d3f6-54ef-4b93-a4e9-f5594925e113.jpg');
+				background-size: 100%;
+				background-size: cover;
+				background-position: center;
+				background-repeat: no-repeat;
+			}
+			.text_white {
+				color: #ffffff;
+			}
+			.padding-top_130 {
+				padding-top: 130px;
+			}
+			.basic-link {
+				color: #215ca0;
+			}
+			.bg-image_pad {
+				padding-top: 120px;
 			}
 			@media only screen and (max-device-width: 640px),
 			screen and (max-width: 640px) {
-				.width--100pc {
+				.width-100pc {
 					width: 100% !important;
 				}
-				.block--show {
+				.block-show {
 					display: block !important;
 					margin: 0 !important;
 					padding: 0 !important;
@@ -158,54 +186,46 @@
 					width: auto !important;
 					max-height: inherit !important;
 				}
-				.block--hide {
+				.block-hide {
 					display: none !important;
 				}
-				.display--block {
+				.display-block {
 					display: block !important;
 					width: 100% !important;
 					max-width: 100% !important;
 				}
-				.display--header {
-					display: table-header-group !important;
-				}
-				.display--footer {
-					display: table-footer-group !important;
-				}
-				.padding__horizontal--0 {
+				.padding_horizontal-0 {
 					padding-left: 0 !important;
 					padding-right: 0 !important;
 				}
-				.padding__horizontal--5pc {
+				.padding_horizontal-5pc {
 					padding-left: 5% !important;
 					padding-right: 5% !important;
 				}
-				.image--scale {
+				.image-scale {
 					width: 100% !important;
 					height: auto !important;
 				}
-				.table__padding--mobile {
+				.table_padding-mobile {
 					padding: 0 5% !important;
 				}
-				.align--center {
+				.align-center {
 					text-align: center !important;
 				}
-				.align--left {
+				.align-left {
 					text-align: left !important;
 				}
-				.background__color--blue {
+				.background_color-blue {
 					background-color:#DBEDF8 !important;
 				}
-				.background__image--mobile {
-					background-image: url(http://image.exct.net/lib/fe5c1570736306757c16/m/1/2017_codebase_imageMobile.jpg);
-					background-repeat: repeat-y;
-					background-size: 100% auto;
+				.background_image-swap {
+					background-image: url('http://image.s4.exct.net/lib/fe9215737c61027f76/m/1/c9915936-6c81-4410-b84a-5d67da93cc5c.jpg');
 				}
-				.display--inline-block {
+				.display-inline-block {
 					display: inline-block !important;
 				}
-				.align__vertical--middle {
-					vertical-align: middle !important;
+				.block-center {
+					margin: 0 auto !important;
 				}
 			}
 		</style>
@@ -236,10 +256,10 @@
 			<tr>
 				<td bgcolor="#efefef">
 					<div align="center">
-						<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="640" bgcolor="#EFEFEF" class="width--100pc">
+						<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="640" bgcolor="#EFEFEF" class="width-100pc">
 							<!--%%[/* Sample Header Graphic */]%%-->
 							<tr>
-								<td width="320" align="center" valign="top" bgcolor="#EFEFEF" class="logo-block padding__horizontal--0">
+								<td width="320" align="center" valign="top" bgcolor="#EFEFEF" class="logo-block padding_horizontal-0">
 									<img alt="" src="https://placeholdit.imgix.net/~text?txtsize=28&bg=02A1E0&txtclr=FFFFFF&txt=Sample%20Header%20Graphic&w=640&h=200" width="320" height="100" border="0">
 								</td>
 							</tr>
@@ -248,17 +268,17 @@
 							<!--%%[/* Demo Article: Image:Scale, Alignment: Center-aligned to Left-aligned, Button: Fluid-width to Full-width */]%%-->
 							<!--%%[/* Image:Scale */]%%-->
 							<tr>
-								<td width="320" align="center" valign="top" class="padding__horizontal--0">
-									<img alt="" src="https://placeholdit.imgix.net/~text?txtsize=28&bg=036648&txtclr=FFFFFF&txt=Retina-Sized%2C%20Scaling%20Image&w=1280&h=400" width="640" height="200" border="0" class="image--scale">
+								<td width="320" align="center" valign="top" class="padding_horizontal-0">
+									<img alt="" src="https://placeholdit.imgix.net/~text?txtsize=28&bg=036648&txtclr=FFFFFF&txt=Retina-Sized%2C%20Scaling%20Image&w=1280&h=400" width="640" height="200" border="0" class="image-scale">
 								</td>
 							</tr>
 							<!--%%[/* /Image:Scale */]%%-->
 							<tr>
-								<td width="640" align="center" valign="top" class="article--pad__20" bgcolor="#FFFFFF">
+								<td width="640" align="center" valign="top" class="padding_20" bgcolor="#FFFFFF">
 									<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
 										<!--%%[/* Alignment: Center-aligned to Left-aligned */]%%-->
 										<tr>
-											<td width="580" align="center" valign="top" class="align--left">
+											<td align="center" valign="top" class="align-left">
 												<h3>Alignment: Center-aligned to Left-aligned.</h3>
 												<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p>
 											</td>
@@ -272,10 +292,10 @@
 										<!--%%[/* Button: Fluid-width to Full-width */]%%-->
 										<tr>
 											<td align="center" valign="top">
-												<table role="presentation" border="0" cellspacing="0" cellpadding="0" class="width--100pc">
+												<table role="presentation" border="0" cellspacing="0" cellpadding="0" class="width-100pc">
 													<tr>
-														<td align="center" bgcolor="#555555" class="btn--primary">
-															<a href="http://www.marketingcloud.com" alias="Marketing Cloud Button 4" target="_blank" class="btn-link--primary">Button: Fluid to Full-width</a>
+														<td align="center" bgcolor="#215ca0" class="btn-primary">
+															<a href="http://www.marketingcloud.com" alias="Marketing Cloud Button 4" target="_blank" class="btn-link-primary">Button: Fluid to Full-width</a>
 														</td>
 													</tr>
 												</table>
@@ -298,13 +318,13 @@
 								<td width="640" align="center" valign="top">
 									<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
 										<tr>
-											<td width="320" align="center" valign="top" class="display--block">
-												<img alt="alt text" src="https://placeholdit.imgix.net/~text?txtsize=28&bg=036648&txtclr=FFFFFF&txt=Image%20Left&w=320&h=200" width="320" height="200" border="0" class="image--scale">
+											<td width="320" align="center" valign="top" class="display-block">
+												<img alt="alt text" src="https://placeholdit.imgix.net/~text?txtsize=28&bg=036648&txtclr=FFFFFF&txt=Image%20Left&w=320&h=200" width="320" height="200" border="0" class="image-scale">
 											</td>
-											<td width="320" align="center" valign="top" class="display--block" bgcolor="#FFFFFF">
+											<td width="320" align="center" valign="top" class="display-block" bgcolor="#FFFFFF">
 												<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
 													<tr>
-														<td align="left" valign="top" class="article--pad__20">
+														<td align="left" valign="top" class="padding_20">
 															<h3>Column Stack: Left Over Right.</h3>
 															<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
 														</td>
@@ -328,13 +348,13 @@
 								<td width="640" align="center" valign="top" dir="rtl">
 									<table role="presentation" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
 										<tr>
-											<td width="320" align="center" valign="top" dir="ltr" class="display--block">
-												<img alt="alt text" src="https://placeholdit.imgix.net/~text?txtsize=28&bg=036648&txtclr=FFFFFF&txt=Image%20Right&w=320&h=200" width="320" height="200" border="0" class="image--scale">
+											<td width="320" align="center" valign="top" dir="ltr" class="display-block">
+												<img alt="alt text" src="https://placeholdit.imgix.net/~text?txtsize=28&bg=036648&txtclr=FFFFFF&txt=Image%20Right&w=320&h=200" width="320" height="200" border="0" class="image-scale">
 											</td>
-											<td width="320" align="center" valign="top" dir="ltr" class="display--block" bgcolor="#FFFFFF">
+											<td width="320" align="center" valign="top" dir="ltr" class="display-block" bgcolor="#FFFFFF">
 												<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
 													<tr>
-														<td align="left" valign="top" class="article--pad__20">
+														<td align="left" valign="top" class="padding_20">
 															<h3>Column Stack: Right Over Left.</h3>
 															<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
 														</td>
@@ -355,11 +375,11 @@
 
 							<!--%%[/* Button: Fixed-width */]%%-->
 							<tr>
-								<td width="320" align="center" valign="top" class="padding__horizontal--0 btn-pad--wide">
+								<td width="320" align="center" valign="top" class="padding_horizontal-0 pad-wide">
 									<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="320">
 										<tr>
-											<td width="320" align="center" valign="middle" height="47" bgcolor="#555555" class="btn--primary">
-												<a href="http://www.marketingcloud.com" alias="Marketing Cloud Button" target="_blank" class="btn-link--primary">Button: Fixed-width</a>
+											<td width="320" align="center" valign="middle" height="47" bgcolor="#215ca0" class="btn-primary">
+												<a href="http://www.marketingcloud.com" alias="Marketing Cloud Button" target="_blank" class="btn-link-primary">Button: Fixed-width</a>
 											</td>
 										</tr>
 									</table>
@@ -375,11 +395,11 @@
 
 							<!--%%[/* Button: Fixed-width to Full-width */]%%-->
 							<tr>
-								<td width="320" align="center" valign="top" class="padding__horizontal--0 btn-pad--wide">
+								<td width="360" align="center" valign="top" class="padding_horizontal-0 pad-wide">
 									<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
 										<tr>
-											<td width="320" align="center" valign="middle" height="47" bgcolor="#555555" class="width--100pc btn--primary">
-												<a href="http://www.marketingcloud.com" alias="Marketing Cloud Button 2" target="_blank" class="btn-link--primary">Button: Fixed-width to Full-width</a>
+											<td width="360" align="center" valign="middle" height="47" bgcolor="#215ca0" class="width-100pc btn-primary">
+												<a href="http://www.marketingcloud.com" alias="Marketing Cloud Button 2" target="_blank" class="btn-link-primary">Button: Fixed-width to Full-width</a>
 											</td>
 										</tr>
 									</table>
@@ -395,11 +415,11 @@
 
 							<!--%%[/* Button: Fluid-width */]%%-->
 							<tr>
-								<td align="center" valign="top" class="padding__horizontal--0">
+								<td align="center" valign="top" class="padding_horizontal-0">
 									<table role="presentation" border="0" cellspacing="0" cellpadding="0">
 										<tr>
-											<td align="center" bgcolor="#555555" class="btn--primary">
-												<a href="http://www.marketingcloud.com" alias="Marketing Cloud Button 3" target="_blank" class="btn-link--primary">Button: Fluid-width</a>
+											<td align="center" bgcolor="#215ca0" class="btn-primary">
+												<a href="http://www.marketingcloud.com" alias="Marketing Cloud Button 3" target="_blank" class="btn-link-primary">Button: Fluid-width</a>
 											</td>
 										</tr>
 									</table>
@@ -416,10 +436,10 @@
 							<!--%%[/* Button: Fluid-width to Full-width */]%%-->
 							<tr>
 								<td align="center" valign="top">
-									<table role="presentation" border="0" cellspacing="0" cellpadding="0" class="width--100pc">
+									<table role="presentation" border="0" cellspacing="0" cellpadding="0" class="width-100pc">
 										<tr>
-											<td align="center" bgcolor="#555555" class="btn--primary">
-												<a href="http://www.marketingcloud.com" alias="Marketing Cloud Button 4" target="_blank" class="btn-link--primary">Button: Fluid to Full-width</a>
+											<td align="center" bgcolor="#215ca0" class="btn-primary">
+												<a href="http://www.marketingcloud.com" alias="Marketing Cloud Button 4" target="_blank" class="btn-link-primary">Button: Fluid to Full-width</a>
 											</td>
 										</tr>
 									</table>
@@ -435,8 +455,8 @@
 
 							<!--%%[/* Image: Scale */]%%-->
 							<tr>
-								<td width="320" align="center" valign="top" style="padding:0 160px;" class="padding__horizontal--0">
-									<img alt="" src="https://placeholdit.imgix.net/~text?txtsize=28&bg=036648&txtclr=FFFFFF&txt=Scaling%20Image&w=640&h=400" width="320" height="200" border="0" class="image--scale">
+								<td width="320" align="center" valign="top" class="padding_horizontal-0 pad-wide">
+									<img alt="" src="https://placeholdit.imgix.net/~text?txtsize=28&bg=036648&txtclr=FFFFFF&txt=Scaling%20Image&w=640&h=400" width="320" height="200" border="0" class="image-scale">
 								</td>
 							</tr>
 							<!--%%[/* /Image: Scale */]%%-->
@@ -449,7 +469,7 @@
 
 							<!--%%[/* Image: Persistent Dimensions */]%%-->
 							<tr>
-								<td width="320" align="center" valign="top" style="padding:0 160px;" class="padding__horizontal--0">
+								<td width="320" align="center" valign="top" class="padding_horizontal-0 pad-wide">
 									<img alt="" src="https://placeholdit.imgix.net/~text?txtsize=28&bg=036648&txtclr=FFFFFF&txt=Persistent%20Dimensions%20Image&w=640&h=400" width="320" height="200" border="0">
 								</td>
 							</tr>
@@ -463,19 +483,13 @@
 
 							<!--%%[/* Text: Semantic Bulleted List */]%%-->
 							<tr>
-								<td width="640" align="center" valign="top" class="article--pad__20" bgcolor="#FFFFFF">
-									<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-										<tr>
-											<td valign="top" align="left">
-												<h3>Semantic Bulleted List</h3>
-												<ul>
-													<li>This list</li>
-													<li>Will look the same</li>
-													<li>Across all mail clients</li>
-												</ul>
-											</td>
-										</tr>
-									</table>
+								<td width="640" align="left" valign="top" class="padding_20" bgcolor="#FFFFFF">
+									<h3>Semantic Bulleted List</h3>
+									<ul>
+										<li>This list</li>
+										<li>Will look the same</li>
+										<li>Across all mail clients</li>
+									</ul>
 								</td>
 							</tr>
 							<!--%%[/* /Text: Semantic Bulleted List */]%%-->
@@ -488,7 +502,7 @@
 
 							<!--%%[/* Alignment: Left-aligned to Center-aligned */]%%-->
 							<tr>
-								<td width="640" align="left" valign="top" class="article--bg__white article--pad__20">
+								<td width="640" align="left" valign="top" bgcolor="#FFFFFF" class="padding_20 align-center">
 									<h3>Alignment: Left-aligned to Center-aligned.</h3>
 									<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p>
 								</td>
@@ -503,9 +517,9 @@
 
 							<!--%%[/* Alignment: Center-aligned to Left-aligned */]%%-->
 							<tr>
-								<td width="580" align="center" valign="top" style="padding:0px 30px; font-family:Arial, Helvetica, sans-serif; font-size:18px; line-height:22px; mso-line-height-rule:exactly; color:#000001; font-weight:normal;" class="align--left padding__horizontal--5pc">
-									<span style="font-weight:bold;">Alignment: Center-aligned to Left-aligned.</span>
-									<br> Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.
+								<td width="640" align="center" valign="top" bgcolor="#FFFFFF" class="padding_20 align-left">
+									<h3>Alignment: Center-aligned to Left-aligned.</h3>
+									<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p>
 								</td>
 							</tr>
 							<!--%%[/* /Alignment: Center-aligned to Left-aligned */]%%-->
@@ -519,10 +533,8 @@
 							<!--%%[/* Show on mobile */]%%-->
 							<!--[if !mso]><!-- -->
 							<tr>
-								<td bgcolor="#EFEFEF" style="font-size:0%; line-height: 0px; padding:0;">
-									<div class="block--show" style="font-size:0%; max-height: 0; overflow: hidden; display: none">
-										<img alt="" src="https://placeholdit.imgix.net/~text?txtsize=28&bg=036648&txtclr=FFFFFF&txt=Mobile--Show_Scaling_Image&w=640&h=400" width="" height="" border="0" class="image--scale">
-									</div>
+								<td class="block-show">
+									<img alt="" src="https://placeholdit.imgix.net/~text?txtsize=28&bg=036648&txtclr=FFFFFF&txt=Mobile%20Show%2C%20Scaling%20Image&w=1280&h=800" width="" height="" border="0" class="image-scale">
 								</td>
 							</tr>
 							<!--<![endif]-->
@@ -530,8 +542,8 @@
 
 							<!--%%[/* Hide on mobile */]%%-->
 							<tr>
-								<td width="640" align="center" valign="top" class="block--hide">
-									<img alt="" src="https://placeholdit.imgix.net/~text?txtsize=28&bg=036648&txtclr=FFFFFF&txt=Mobile--Hide_Image&w=640&h=400" width="640" height="400" border="0">
+								<td width="640" class="block-hide">
+									<img alt="" src="https://placeholdit.imgix.net/~text?txtsize=28&bg=036648&txtclr=FFFFFF&txt=Mobile%20Hide&w=1280&h=800" width="640" height="400" border="0" class="image-scale">
 								</td>
 							</tr>
 							<!--%%[/* /Hide on mobile */]%%-->
@@ -544,7 +556,7 @@
 
 							<!--%%[/* Background: Color Change */]%%-->
 							<tr>
-								<td width="620" align="left" valign="top" class="article--pad__20 background__color--blue" bgcolor="#FFFFFF">
+								<td width="640" align="left" valign="top" class="padding_20 background_color-blue" bgcolor="#FFFFFF">
 									<h3>White background color on desktop; blue background color on mobile.</h3>
 									<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p>
 								</td>
@@ -557,27 +569,27 @@
 							</tr>
 							<!--%%[/* /Spacer */]%%-->
 
-							<!--%%[/* Background: Image Change (Note: Background images not supported on Android >4.4) */]%%-->
+							<!--%%[/* Background: Image Change */]%%-->
 							<tr>
-								<td width="640" height="300" align="center" valign="middle" background="https://placeholdit.imgix.net/~text?txtsize=60&bg=aaaaaa&txtclr=000000&txt=¯\_(ツ)_/¯&w=640&h=300" class="background__image--mobile">
+								<td width="640" height="300" align="center" valign="middle" class="background_image background_image-swap">
 									<!--[if (gte mso 9)|(IE)]>
-								  	<v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:640px;height:300px;">
-								    <v:fill type="tile" src="https://placeholdit.imgix.net/~text?txtsize=60&bg=aaaaaa&txtclr=000000&txt=¯\_(ツ)_/¯&w=640&h=300" color="#fee773" />
-								    <v:textbox inset="0,0,0,0">
+										<v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:640px;height:300px;">
+										<v:fill type="tile" src="http://image.s4.exct.net/lib/fe9215737c61027f76/m/1/890c3e80-9811-4b5f-b68c-fdfb5cfbbef7.jpg" color="#333333" />
+										<v:textbox inset="0,0,0,0">
 									<![endif]-->
 									<div>
 										<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
 											<tr>
-												<td width="640" height="300" align="center" valign="middle" style="font-family:Arial, Helvetica, sans-serif; font-size:18px; line-height:22px; mso-line-height-rule:exactly; color:#ffffff; font-weight:normal; text-shadow:1px 1px #000001">
-													<span style="font-weight:bold;">Background image change. </span>
-													<br> Here is some text on top of a background image.
+												<td width="640" height="300" align="center" valign="middle" class="text_white">
+													<h3 class="text_white">Background image change.</h3>
+													<p class="text_white">Here is some text on top of a background image.</p>
 												</td>
 											</tr>
 										</table>
 									</div>
 									<!--[if (gte mso 9)|(IE)]>
-							  		</v:textbox>
-							  		</v:rect>
+										</v:textbox>
+										</v:rect>
 							  		<![endif]-->
 								</td>
 							</tr>
@@ -591,14 +603,11 @@
 
 							<!--%%[/* Button: Left-aligned to Center-aligned */]%%-->
 							<tr>
-								<td align="left" valign="top" class="align--center">
-									<table role="presentation" border="0" cellspacing="0" cellpadding="0" class="width--100pc">
+								<td align="left" valign="top" class="align-center">
+									<table role="presentation" border="0" cellspacing="0" cellpadding="0" class="block-center">
 										<tr>
-											<td align="center" bgcolor="#555555" style="-webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;" class="display--inline-block">
-												<!--%%[/* Remove class to create full-width button" */]%%-->
-												<a href="http://www.marketingcloud.com" alias="Marketing Cloud Button" target="_blank" style="font-size: 18px; font-family: Arial, sans-serif; font-weight: bold; color: #ffffff; text-decoration: none; padding: 10px 25px; border: 1px solid #555555; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; display: block;">
-												Button: Left to Center
-											</a>
+											<td align="center" bgcolor="#215ca0" class="btn-primary">
+												<a href="http://www.marketingcloud.com" alias="Marketing Cloud Button 5" target="_blank" class="btn-link-primary">Button: Left to Center</a>
 											</td>
 										</tr>
 									</table>
@@ -614,25 +623,20 @@
 
 							<!--%%[/* Button on Background images */]%%-->
 							<tr>
-								<td width="640" height="300" align="center" valign="top" background="https://placeholdit.imgix.net/~text?txtsize=60&bg=aaaaaa&txtclr=000000&w=640&h=300" class="background__image--mobile align__vertical--middle">
+								<td width="640" height="300" valign="top" class="background_image">
 									<!--[if (gte mso 9)|(IE)]>
-									<v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:640px;height:300px;">
-								    <v:fill type="tile" src="https://placeholdit.imgix.net/~text?txtsize=60&bg=aaaaaa&txtclr=000000&w=640&h=300" color="#fee773" />
-								    <v:textbox inset="0,0,0,0">
+										<v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:640px;height:300px;">
+										<v:fill type="tile" src="http://image.s4.exct.net/lib/fe9215737c61027f76/m/1/890c3e80-9811-4b5f-b68c-fdfb5cfbbef7.jpg" color="#333333" />
+										<v:textbox inset="0,0,0,0">
 									<![endif]-->
 									<div>
 										<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
 											<tr>
-												<td align="center" valign="top" class="align__vertical--middle">
+												<td align="center" class="bg-image_pad">
 													<table role="presentation" border="0" cellspacing="0" cellpadding="0">
 														<tr>
-															<td align="left" valign="top" style="font-family:Arial, Helvetica, sans-serif; font-size:15px; line-height:130px; mso-line-height-rule:exactly; color:#000001; font-weight:normal;" class="block--hide">&nbsp;</td>
-														</tr>
-														<tr>
-															<td align="center" bgcolor="#555555" style="-webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;" class="width--100pc">
-																<a href="http://www.marketingcloud.com" alias="Marketing Cloud Button 2" target="_blank" style="font-size: 18px; font-family: Arial, sans-serif; font-weight: bold; color: #ffffff; text-decoration: none; padding: 10px 25px; border: 1px solid #555555; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; display: block;">
-							  								Marketing Cloud
-							  							</a>
+															<td align="center" bgcolor="#215ca0" class="btn-primary">
+																<a href="http://www.marketingcloud.com" alias="Marketing Cloud Button 3" target="_blank" class="btn-link-primary">Button: Fluid-width</a>
 															</td>
 														</tr>
 													</table>
@@ -641,9 +645,9 @@
 										</table>
 									</div>
 									<!--[if (gte mso 9)|(IE)]>
-									</v:textbox>
-									</v:rect>
-									<![endif]-->
+										</v:textbox>
+										</v:rect>
+							  		<![endif]-->
 								</td>
 							</tr>
 							<!--%%[/* /Button on Background images */]%%-->
@@ -654,73 +658,22 @@
 							</tr>
 							<!--%%[/* /Spacer */]%%-->
 
-							<!--%%[/* Button: Image Edges*/]%%-->
-							<tr>
-								<td align="center" valign="top">
-									<table role="presentation" border="0" cellpadding="0" cellspacing="0">
-										<tr>
-											<td width="5" align="left" valign="top">
-												<a href="http://www.marketingcloud.com" alias="Marketing Cloud Button 3 Left Edge" target="_blank" style="text-decoration:none;">
-												<img alt="" src="http://image.exct.net/lib/fe5c1570736306757c16/m/1/2017_codebase_buttonLeft_1.png" width="5" height="47" border="0">
-											</a>
-											</td>
-											<td width="184" align="center" valign="middle" bgcolor="#555555" style="font-family:Arial, Helvetica, sans-serif; color:#ffffff; font-weight:bold;">
-												<a href="http://www.marketingcloud.com" alias="Marketing Cloud Button 3" target="_blank" style="font-size:18px; line-height:44px; mso-line-height-rule:exactly; color:#ffffff; font-weight:bold; text-decoration:none; display:block;"><span style="color:#ffffff; font-weight:bold; text-decoration:none;">Marketing Cloud</span></a>
-											</td>
-											<td width="5" align="left" valign="top">
-												<a href="http://www.marketingcloud.com" alias="Marketing Cloud Button 3 Right Edge" target="_blank" style="text-decoration:none;">
-												<img alt="" src="http://image.exct.net/lib/fe5c1570736306757c16/m/1/2017_codebase_buttonRight_1.png" width="5" height="47" border="0">
-											</a>
-											</td>
-										</tr>
-									</table>
-								</td>
-							</tr>
-							<!--%%[/* /Button: Image Edges*/]%%-->
-
-							<!--%%[/* Spacer */]%%-->
-							<tr>
-								<td height="50" width="100%" align="center" valign="top" bgcolor="#EFEFEF" class="spacer">&nbsp;</td>
-							</tr>
-							<!--%%[/* /Spacer */]%%-->
-
-							<!--%%[/* Button: Image Edges and Background Gradient*/]%%-->
-							<tr>
-								<td align="center" valign="middle">
-									<table role="presentation" border="0" cellpadding="0" cellspacing="0">
-										<tr>
-											<td width="5" align="left" valign="middle" style="background-image:url('http://image.exct.net/lib/fe5c1570736306757c16/m/1/2017_codebase_buttonBgLeft_1.png'); background-size:5px 47px; background-repeat:no-repeat; font-family:Arial, Helvetica, sans-serif; font-size:12px; line-height:47px; mso-line-height-rule:exactly; color:#555555; font-weight:normal;">
-												<img alt="" src="http://image.exct.net/lib/fe5c1570736306757c16/m/1/spacer.png" width="1" height="1" border="0">
-											</td>
-											<td width="184" align="center" valign="middle" bgcolor="#555555" height="47" style="font-family:Arial, Helvetica, sans-serif; color:#ffffff; font-weight:bold; background-image:url('http://image.exct.net/lib/fe5c1570736306757c16/m/1/2017_codebase_buttonBg_1.png'); background-size:184px 47px; background-repeat:no-repeat;">
-												<a href="http://www.marketingcloud.com" alias="Marketing Cloud Button 3" target="_blank" style="font-size:18px; line-height:44px; mso-line-height-rule:exactly; color:#ffffff; font-weight:bold; text-decoration:none; display:block;"><span style="color:#ffffff; font-weight:bold; text-decoration:none;">Marketing Cloud</span></a>
-											</td>
-											<td width="5" align="left" valign="middle" style="background-image:url('http://image.exct.net/lib/fe5c1570736306757c16/m/1/2017_codebase_buttonBgRight_1.png'); background-size:5px 47px; background-repeat:no-repeat; font-family:Arial, Helvetica, sans-serif; font-size:12px; line-height:12px; mso-line-height-rule:exactly; color:#555555; font-weight:normal;">
-												<img alt="" src="http://image.exct.net/lib/fe5c1570736306757c16/m/1/spacer.png" width="1" height="1" border="0">
-											</td>
-										</tr>
-									</table>
-								</td>
-							</tr>
-							<!--%%[/* /Button: Image Edges and Background Gradient*/]%%-->
-
-							<!--%%[/* Spacer */]%%-->
-							<tr>
-								<td height="50" width="100%" align="center" valign="top" bgcolor="#EFEFEF" class="spacer">&nbsp;</td>
-							</tr>
-							<!--%%[/* /Spacer */]%%-->
-
 							<!--%%[/* Sample Footer */]%%-->
 							<tr>
-								<td width="580" align="left" valign="top" style="padding:30px 30px; font-family:Arial, Helvetica, sans-serif; font-size:18px; line-height:22px; mso-line-height-rule:exactly; color:#000001; font-weight:normal;" class="align--center padding__horizontal--5pc">
-									<a href="http://www.marketingcloud.com" alias="Privacy" target="_blank" style="color:#333333; font-weight:bold; text-decoration:underline; width:100%;">Privacy</a> &nbsp;|
-									<a href="http://www.marketingcloud.com" alias="My Preferences" target="_blank" style="color:#333333; font-weight:bold; text-decoration:underline; width:100%;">My Preferences</a> &nbsp;
-									<span class="block--hide">|</span>
-									<a href="http://www.marketingcloud.com" alias="Unsubscribe" target="_blank" style="color:#333333; font-weight:bold; text-decoration:underline; width:100%;">Unsubscribe</a>
-									<br><br> Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.
+								<td width="640" align="left" valign="top" class="align-center padding_20">
+									<a href="http://www.marketingcloud.com" alias="Privacy" target="_blank" class="basic-link">Privacy</a>&nbsp;|&nbsp;
+									<a href="http://www.marketingcloud.com" alias="My Preferences" target="_blank" class="basic-link">My Preferences</a>&nbsp;|&nbsp;
+									<a href="http://www.marketingcloud.com" alias="Unsubscribe" target="_blank" class="basic-link">Unsubscribe</a>
+									<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p>
 								</td>
 							</tr>
 							<!--%%[/* /Sample Footer */]%%-->
+
+							<!--%%[/* Spacer */]%%-->
+							<tr>
+								<td height="50" width="100%" align="center" valign="top" bgcolor="#EFEFEF" class="spacer">&nbsp;</td>
+							</tr>
+							<!--%%[/* /Spacer */]%%-->
 
 						</table>
 					</div>

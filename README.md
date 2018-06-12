@@ -28,5 +28,5 @@ Gmail, Yahoo!, AOL, Outlook.com, Office 365<br>
 
 ## Contributors
 
-* [Austin Guevara](https://github.com/austin-guevara)
 * [Laura Uy](https://github.com/lauralynnuy)
+* [Austin Guevara](https://github.com/austin-guevara)
