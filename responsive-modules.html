@@ -63,7 +63,10 @@
 				width: device-width;
 			}
 		</style>
-		<style>
+        <style type="text/css">
+            html {
+                background-color: #efefef;
+            }
 			body {
 				font-family: 'IBM Plex Sans', Arial, Helvetica, sans-serif; 
 			}
@@ -101,6 +104,27 @@
 			ul, ol {
 				Margin: 0 0 0 25px;
 				padding: 0;
+			}
+			th {
+				font-weight: inherit;
+			}
+			/* iPhone 4, 4S, 5, 5S, 5C, and 5SE */
+			@media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
+					u ~ div .eml-container {
+							min-width: 320px !important;
+					}
+			}
+			/* iPhone 6, 6S, 7, 8, and X */
+			@media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
+					u ~ div .eml-container {
+							min-width: 375px !important;
+					}
+			}
+			/* iPhone 6+, 7+, and 8+ */
+			@media only screen and (min-device-width: 414px) {
+					u ~ div .eml-container {
+							min-width: 414px !important;
+					}
 			}
 			/* Modules */
 			.logo {
@@ -142,7 +166,7 @@
 				-webkit-border-radius: 5px; 
 				-moz-border-radius: 5px; 
 				border-radius: 5px; 
-				color: #ffffff; 
+				color: #ffffff !important;
 				display: block;
 				padding: 10px 25px; 
 				text-decoration: none;
@@ -241,7 +265,7 @@
 				.mb-pad-t20-b20 {
 					padding-top: 20px !important;
 					padding-bottom: 20px !important;
-				}								
+				}
 			}
 		</style>
 		<!--[if gte mso 9]>
@@ -270,7 +294,7 @@
 		<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
 			<tr>
 				<td bgcolor="#efefef">
-					<div align="center">
+					<div align="center" class="eml-container">
 						<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="640" class="mb-width-100pc">
 							<!--%%[/* Sample Header Graphic */]%%-->
 							<tr>
@@ -333,10 +357,10 @@
 								<td width="640" align="center" valign="top">
 									<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
 										<tr>
-											<td width="320" align="center" valign="top" class="mb-col-stack">
+											<th width="320" align="center" valign="top" class="mb-col-stack">
 												<img alt="alt text" src="https://placeholdit.imgix.net/~text?txtsize=28&bg=036648&txtclr=FFFFFF&txt=Image%20Left&w=320&h=200" width="320" height="200" border="0" class="mb-img-scale">
-											</td>
-											<td width="320" align="center" valign="top" class="mb-col-stack" bgcolor="#FFFFFF">
+											</th>
+											<th width="320" align="center" valign="top" class="mb-col-stack" bgcolor="#FFFFFF">
 												<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
 													<tr>
 														<td align="left" valign="top" class="pad-20">
@@ -345,7 +369,7 @@
 														</td>
 													</tr>
 												</table>
-											</td>
+											</th>
 										</tr>
 									</table>
 								</td>
@@ -361,12 +385,12 @@
 							<!--%%[/* Column Stack: Right Over Left */]%%-->
 							<tr>
 								<td width="640" align="center" valign="top" dir="rtl">
-									<table role="presentation" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+									<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
 										<tr>
-											<td width="320" align="center" valign="top" dir="ltr" class="mb-col-stack">
+											<th width="320" align="center" valign="top" dir="ltr" class="mb-col-stack">
 												<img alt="alt text" src="https://placeholdit.imgix.net/~text?txtsize=28&bg=036648&txtclr=FFFFFF&txt=Image%20Right&w=320&h=200" width="320" height="200" border="0" class="mb-img-scale">
-											</td>
-											<td width="320" align="center" valign="top" dir="ltr" class="mb-col-stack" bgcolor="#FFFFFF">
+											</th>
+											<th width="320" align="center" valign="top" dir="ltr" class="mb-col-stack" bgcolor="#FFFFFF">
 												<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
 													<tr>
 														<td align="left" valign="top" class="pad-20">
@@ -375,7 +399,7 @@
 														</td>
 													</tr>
 												</table>
-											</td>
+											</th>
 										</tr>
 									</table>
 								</td>
