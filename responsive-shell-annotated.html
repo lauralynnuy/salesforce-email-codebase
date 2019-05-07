@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<!--%%[/* tell screen readers that the language is set to "en"; set VML namespace declaration  for Outlook */]%%-->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+
+<head>
+   <title></title>
+
+   <!--%%[/* set content to utf-8 */]%%-->
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+   <!--%%[/* tell device to render the page width to the native width the device screen for responsive design */]%%-->
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!--%%[/* enable responsive behavior in Windows phones (REF 1) */]%%-->
+   <!--[if !mso]>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <![endif]-->
+
+   <!--%%[/* disable auto-scaling in iOS Mail 10. (REF 2) */]%%-->
+   <meta name="x-apple-disable-message-reformatting">
+
+   <!--%%[/* force a lower DPI rate to prevent image scaling in Outlook */]%%-->
+   <!--[if gte mso 9]><xml>
+      <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+    </o:OfficeDocumentSettings>
+  </xml><![endif]-->
+
+   <!--%%[/* prevent Outlook defaulting to Times New Roman */]%%-->
+   <!--[if mso]><style> * { font-family: sans-serif !important; } </style><![endif]-->
+
+   <!--%%[/* Display web fonts for all non-Outlook clients */]%%-->
+   <!--[if !mso]><!-->
+   <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700" rel="stylesheet">
+   <!--<![endif]-->
+
+   <style type="text/css">
+      /* =================
+       RESET STYLES 
+       ================= */
+
+      /* -----------------
+       CLIENT RESETS
+       ----------------- */
+      /* Prevents small text resizing. */
+      * {
+         -ms-text-size-adjust: 100%;
+         -webkit-text-size-adjust: 100%;
+      }
+
+      /* Keeps fonts sharp on browsers and Webkit clients (REF 3)*/
+      body {
+         -webkit-font-smoothing: antialiased;
+         -moz-osx-font-smoothing: grayscale;
+         text-rendering: optimizeLegibility;
+      }
+
+      /* Removes added table space in Outlook. (REF ?) */
+      table,
+      td {
+         mso-table-lspace: 0pt;
+         mso-table-rspace: 0pt;
+      }
+
+      /* Removes added table space in WebKit. (REF ?) */
+      table {
+         border-spacing: 0;
+         border-collapse: collapse;
+         table-layout: fixed;
+         margin: 0 auto;
+      }
+
+      /* Improves rendering of scaled images in IE. (REF ?) */
+      img {
+         -ms-interpolation-mode: bicubic;
+         max-width: 100%;
+         border: 0;
+      }
+
+      /* Overrules triggered links in iOS. (REF ?) */
+      *[x-apple-data-detectors] {
+         color: inherit !important;
+         text-decoration: none !important;
+         font-size: inherit !important;
+         font-family: inherit !important;
+         font-weight: inherit !important;
+         line-height: inherit !important;
+      }
+
+      /* Overrules triggered links in Gmail. (REF ?) */
+      .x-gmail-data-detectors,
+      .x-gmail-data-detectors *,
+      .aBn {
+         border-bottom: 0 !important;
+         cursor: default !important;
+      }
+
+      /* Windows Phone Fix viewport in IE 11 rendering engine (REF ?) */
+      @-ms-viewport {
+         width: device-width;
+      }
+
+      /* Remove mobile Gmail's gutters (REF 6) */
+      @media screen and (max-width: 480px) {
+         u~div .container {
+            min-width: 100vw !important;
+         }
+      }
+
+      /* -----------------
+       GENERAL RESETS
+       ----------------- */
+      html,
+      body {
+         width: 100% !important;
+         height: 100% !important;
+         margin: 0;
+         padding: 0;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      p,
+      ul,
+      ol {
+         padding: 0;
+         margin: 0;
+      }
+
+      img {
+         border: 0;
+         height: auto;
+         outline: none;
+         display: block;
+      }
+
+      th,
+      td {
+         padding: 0;
+      }
+
+      /* =================
+       GENERIC STYLES 
+       ================= */
+      * {
+         transition: all 0.5s !important;
+      }
+
+      body {
+         font-family: 'IBM Plex Sans', Arial, Helvetica, sans-serif;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      p {
+         color: #000001;
+         margin: 0;
+         mso-line-height-rule: exactly;
+      }
+
+      h1 {
+         font-size: 32px;
+         font-weight: bold;
+         line-height: 38px;
+      }
+
+      h2 {
+         font-size: 28px;
+         font-weight: bold;
+         line-height: 34px;
+      }
+
+      h3 {
+         font-size: 22px;
+         font-weight: bold;
+         line-height: 26px;
+      }
+
+      p,
+      li,
+      a {
+         font-size: 16px;
+         line-height: 1.2;
+         padding-top: 10px;
+      }
+
+      a {
+         color: #215ca0;
+      }
+
+      ul,
+      ol,
+      li {
+         margin: 0;
+         text-align: left;
+      }
+
+      ul,
+      ol {
+         margin-left: 25px;
+         padding: 0;
+      }
+
+      /* =================
+      MODULE STYLES 
+      ================= */
+      .container {
+         background-color: #efefef;
+         font-size: 0;
+      }
+
+      .preheader {
+         display: none;
+         max-height: 0px;
+         overflow: hidden;
+      }
+
+      .blk-white {
+         background-color: #ffffff;
+      }
+
+      .bg-img {
+         background-color: #333333;
+         background-image: url('http://image.s4.exct.net/lib/fe9215737c61027f76/m/1/1149d3f6-54ef-4b93-a4e9-f5594925e113.jpg');
+         background-size: 100%;
+         background-size: cover;
+         background-position: center;
+         background-repeat: no-repeat;
+         height: 300px;
+         font-size: 0;
+      }    
+
+      /* Button Styles */
+      .btn-cta {
+         -webkit-border-radius: 5px; 
+         -moz-border-radius: 5px;
+         border-radius: 5px; 
+         background-color: #215ca0; 
+         color: #ffffff; 
+         font-weight: bold;
+         text-decoration: none;
+         -webkit-transition: background-color 0.1s ease-in-out;
+         -moz-transition: background-color 0.1s ease-in-out;
+         -o-transition: background-color 0.1s ease-in-out;
+         transition: background-color 0.1s ease-in-out;
+         padding: 10px 25px; 
+      }
+      .btn-cta:hover {
+         background-color: #032e61;
+      }   
+   </style>
+
+   <!--%%[/* Multiple style tags to prevent Gmail clipping (REF 5) */]%%-->
+   <style type="text/css">
+      /* =================
+      UTILITY STYLES 
+      ================= */
+
+      .color-main {
+         color: #000001;
+      }
+
+      .color-alt {
+         color: #ffffff;
+      }
+
+      /* -----------------
+       FONT SIZES
+       ----------------- */
+      .fsz0 {
+         font-size: 0;
+      }
+
+      .fsz12 {
+         font-size: 12px;
+      }
+
+      .fsz14 {
+         font-size: 14px;
+      }
+
+      .fsz15 {
+         font-size: 15px;
+      }
+
+      .fsz16 {
+         font-size: 16px;
+      }
+
+      .fsz18 {
+         font-size: 18px;
+      }
+
+      .fsz20 {
+         font-size: 20px;
+      }
+
+      .fsz24 {
+         font-size: 24px;
+      }
+
+      .fsz28 {
+         font-size: 28px;
+      }
+
+      .fsz36 {
+         font-size: 36px;
+      }
+
+      .fsz48 {
+         font-size: 48px;
+      }
+
+      .fsz60 {
+         font-size: 60px;
+      }
+
+      .fsz72 {
+         font-size: 72px;
+      }
+
+      /* -----------------
+       LINE HEIGHTS
+       ----------------- */
+
+      .lh1 {
+         line-height: 1;
+      }
+
+      .lh1-2 {
+         line-height: 1.2;
+      }
+
+      .lh1-5 {
+         line-height: 1.5;
+      }
+
+      .lh2 {
+         line-height: 2;
+      }
+
+      /* -----------------
+       POSITIONING
+       ----------------- */
+      .tal {
+         text-align: left;
+      }
+
+      .tac {
+         text-align: center;
+      }
+
+      .tar {
+         text-align: right;
+      }
+
+      .vat {
+         vertical-align: top;
+      }
+
+      .vam {
+         vertical-align: middle;
+      }
+
+      .vab {
+         vertical-align: bottom;
+      }
+
+      .center {
+         margin: 0 auto;
+      }
+
+      /* -----------------
+       DISPLAY
+       ----------------- */
+      .table {
+         display: table;
+      }
+
+      .td {
+         display: block;
+      }
+
+      .mb-td {
+         display: table-cell;
+      }
+
+      .th {
+         display: table-header-group;
+      }
+
+      .tf {
+         display: table-footer-group;
+      }
+
+      .db {
+         display: block;
+      }
+
+      .dib {
+         display: inline-block;
+      }      
+
+      /* -----------------
+       WIDTH
+       ----------------- */
+
+      .img-fw {
+         margin: 0 auto;
+         max-width: 100% !important;
+         width: 100% !important;
+         height: auto !important;
+      }
+
+      .w25p {
+         width: 25%;
+      }
+
+      .w50p {
+         width: 50%;
+      }
+
+      .w75p {
+         width: 75%;
+      }
+
+      .w100p {
+         width: 100%;
+      }      
+
+      .maxw600 {
+         max-width: 600px;
+      }
+
+      .maxw650 {
+         max-width: 650px;
+      }
+
+      .maxw700 {
+         max-width: 700px;
+      }
+
+      /* -----------------
+       PADDING
+       ----------------- */
+      .pt0 {
+         padding-top: 0px;
+      }
+
+      .pb0 {
+         padding-bottom: 0px;
+      }
+
+      .pr0 {
+         padding-right: 0px;
+      }
+
+      .pl0 {
+         padding-left: 0px;
+      }
+
+      .pv0 {
+         padding-top: 0px;
+         padding-bottom: 0px;
+      }
+
+      .ph0 {
+         padding-right: 0px;
+         padding-left: 0px;
+      }
+
+      .pa0 {
+         padding-right: 0px;
+         padding-left: 0px;
+         padding-top: 0px;
+         padding-bottom: 0px;
+      }
+
+      .pt10 {
+         padding-top: 10px;
+      }
+
+      .pb10 {
+         padding-bottom: 10px;
+      }
+
+      .pr10 {
+         padding-right: 10px;
+      }
+
+      .pl10 {
+         padding-left: 10px;
+      }
+
+      .pv10 {
+         padding-top: 10px;
+         padding-bottom: 10px;
+      }
+
+      .ph10 {
+         padding-right: 10px;
+         padding-left: 10px;
+      }
+
+      .pa10 {
+         padding-right: 10px;
+         padding-left: 10px;
+         padding-top: 10px;
+         padding-bottom: 10px;
+      }
+
+      .pt15 {
+         padding-top: 15px;
+      }
+
+      .pb15 {
+         padding-bottom: 15px;
+      }
+
+      .pr15 {
+         padding-right: 15px;
+      }
+
+      .pl15 {
+         padding-left: 15px;
+      }
+
+      .pv15 {
+         padding-top: 15px;
+         padding-bottom: 15px;
+      }
+
+      .ph15 {
+         padding-right: 15px;
+         padding-left: 15px;
+      }
+
+      .pa15 {
+         padding-right: 15px;
+         padding-left: 15px;
+         padding-top: 15px;
+         padding-bottom: 15px;
+      }
+
+      .pt20 {
+         padding-top: 20px;
+      }
+
+      .pb20 {
+         padding-bottom: 20px;
+      }
+
+      .pr20 {
+         padding-right: 20px;
+      }
+
+      .pl20 {
+         padding-left: 20px;
+      }
+
+      .pv20 {
+         padding-top: 20px;
+         padding-bottom: 20px;
+      }
+
+      .ph20 {
+         padding-right: 20px;
+         padding-left: 20px;
+      }
+
+      .pa20 {
+         padding-right: 20px;
+         padding-left: 20px;
+         padding-top: 20px;
+         padding-bottom: 20px;
+      }
+
+      .pt25 {
+         padding-top: 25px;
+      }
+
+      .pb25 {
+         padding-bottom: 25px;
+      }
+
+      .pr25 {
+         padding-right: 25px;
+      }
+
+      .pl25 {
+         padding-left: 25px;
+      }
+
+      .pv25 {
+         padding-top: 25px;
+         padding-bottom: 25px;
+      }
+
+      .ph25 {
+         padding-right: 25px;
+         padding-left: 25px;
+      }
+
+      .pa25 {
+         padding-right: 25px;
+         padding-left: 25px;
+         padding-top: 25px;
+         padding-bottom: 25px;
+      }
+
+      .pt30 {
+         padding-top: 30px;
+      }
+
+      .pb30 {
+         padding-bottom: 30px;
+      }
+
+      .pr30 {
+         padding-right: 30px;
+      }
+
+      .pl30 {
+         padding-left: 30px;
+      }
+
+      .pv30 {
+         padding-top: 30px;
+         padding-bottom: 30px;
+      }
+
+      .ph30 {
+         padding-right: 30px;
+         padding-left: 30px;
+      }
+
+      .pa30 {
+         padding-right: 30px;
+         padding-left: 30px;
+         padding-top: 30px;
+         padding-bottom: 30px;
+      }
+
+      .pt50 {
+         padding-top: 50px;
+      }
+
+      .pb50 {
+         padding-bottom: 50px;
+      }
+
+      .pr50 {
+         padding-right: 50px;
+      }
+
+      .pl50 {
+         padding-left: 50px;
+      }
+
+      .pv50 {
+         padding-top: 50px;
+         padding-bottom: 50px;
+      }
+
+      .ph50 {
+         padding-right: 50px;
+         padding-left: 50px;
+      }
+
+      .pa50 {
+         padding-right: 50px;
+         padding-left: 50px;
+         padding-top: 50px;
+         padding-bottom: 50px;
+      }
+   </style>
+   <style type="text/css">
+      /* =================
+      DESKTOP STYLES 
+      ================= */
+      @media screen and (min-width: 480px) {}
+
+      @media screen and (min-width: 700px) {
+         .td,
+         .tf,
+         .th {
+            display: table-cell;
+         }
+
+         .dt-w25p {
+            width: 25%;
+         }
+
+         .dt-w33p {
+            width: 25%;
+         }
+
+         .dt-w50p {
+            width: 50%;
+         }
+
+         .dt-pa30 {
+            padding-right: 30px;
+            padding-left: 30px;
+            padding-top: 30px;
+            padding-bottom: 30px;
+         }
+      }
+   </style>
+   <!--%%[/* Duplicate Desktop styles so embedded CSS will work for Outlook (REF ?) */]%%-->
+   <style type="text/css">
+      [owa] .td,
+      [owa] .tf,
+      [owa] .th {
+         display: table-cell;
+         vertical-align: top;
+      }
+
+      [owa] .dt-w25p {
+         width: 25%;
+      }
+
+      [owa] .dt-w33p {
+         width: 25%;
+      }
+
+      [owa] .dt-w50p {
+         width: 50%;
+      }
+
+      [owa] .dt-pa30 {
+         padding-right: 30px;
+         padding-left: 30px;
+         padding-top: 30px;
+         padding-bottom: 30px;
+      }      
+   </style>
+</head>
+
+<body>
+   <!--%%[/* BEGIN: Preheader */]%%-->
+   <div class="preheader">
+      This is a preheader and it should be filled with "&zwnj;&nbsp;" until it reaches 185 characters. Note &zwnj;&nbsp;
+      counts as only two characters when rendered. (REF 4)
+      &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;
+   </div>
+   <!--%%[/* END: Preheader */]%%-->
+
+   <!--%%[/* BEGIN: Main Container */]%%-->
+   <div class="container">
+      <!--[if (gte mso 9)|(IE)]>
+      <table width="100%" bgcolor="#efefef" align="center" cellspacing="0" cellpadding="0" border="0">
+      <tr>
+      <td align="left">
+      <![endif]-->
+
+      <div class="maxw700 center">
+         <!--[if (gte mso 9)|(IE)]>
+         <table width="700" align="center" cellspacing="0" cellpadding="0" border="0">
+         <tr>
+         <td align="left">
+         <![endif]-->       
+
+         <!--%%[/* BEGIN: MODULES GO HERE */]%%-->
+
+         <!--%%[/* BEGIN: Module Header */]%%-->
+         <header>
+            <div class="table w100p">
+               <!--[if (gte mso 9)|(IE)]>
+               <table width="100%" align="center" cellspacing="0" cellpadding="0" border="0">
+               <tr>
+               <td align="left" style="mso-padding-bottom-alt: 20px; mso-padding-top-alt: 20px;">
+               <![endif]-->               
+               <div class="mb-td w50p pv20">
+                  <img alt="" src="https://placeholdit.imgix.net/~text?txtsize=28&bg=02A1E0&txtclr=FFFFFF&txt=Company%20Logo&w=480&h=160" width="240" height="80" border="0">
+               </div>
+               <!--[if (gte mso 9)|(IE)]>
+               </td>
+               <td align="right">
+               <![endif]-->     
+               <div class="mb-td w50p pv20 tar vam">
+                  <a href="http://www.marketingcloud.com" alias="Marketing Cloud Button 3" target="_blank" class="btn-cta fsz14">CTA Button &rarr;</a>
+               </div>          
+               <!--[if (gte mso 9)|(IE)]>
+               </td>
+               </tr>
+               </table>
+               <![endif]-->               
+            </div>
+         </header>
+         <!--%%[/* END: Module Header */]%%-->     
+
+         <!--%%[/* BEGIN: Module Full Width Image */]%%-->
+         <div class="">
+            <!--[if (gte mso 9)|(IE)]>
+            <table width="100%" align="center" cellspacing="0" cellpadding="0" border="0">
+            <tr>
+            <td align="center">
+            <![endif]-->             
+            <img class="img-fw" alt="" src="https://placeholdit.imgix.net/~text?txtsize=28&bg=036648&txtclr=FFFFFF&txt=Retina-Sized%2C%20Scaling%20Image&w=1280&h=400" width="700" height="200" border="0">
+            <!--[if (gte mso 9)|(IE)]>
+            </td>
+            </tr>
+            </table>
+            <![endif]-->             
+         </div>
+         <!--%%[/* END: Module Full Width Image */]%%-->
+         
+         <!--%%[/* BEGIN: Module Copy */]%%-->
+         <div class="pb30">
+            <!--[if (gte mso 9)|(IE)]>
+            <table cellspacing="0" cellpadding="0" border="0" width="100%" align="center" role="presentation">
+            <tr>
+            <td valign="top" style="mso-padding-bottom-alt: 30px;">    
+               <table width="100%" align="center" cellspacing="0" cellpadding="0" border="0">
+               <tr>
+               <td bgcolor="#ffffff" align="center" style="mso-padding-top-alt: 30px; mso-padding-bottom-alt: 30px; mso-padding-right-alt: 30px; mso-padding-left-alt: 30px;">
+            <![endif]-->             
+            <div class="dt-pa30 pa20 blk-white tac">
+               <h1>Hero Module</h1>
+               <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p>
+               <!--[if (gte mso 9)|(IE)]><br><![endif]-->
+               <ul class="pt10 tal">
+                  <li>This list</li>
+                  <li>Will look the same</li>
+                  <li>Across all mail clients</li>
+               </ul>               
+            </div>
+            <!--[if (gte mso 9)|(IE)]>
+               </td>
+               </tr>
+               </table>
+            </td>
+            </tr>
+            </table>            
+            <![endif]-->           
+         </div>
+         <!--%%[/* END: Module Copy */]%%-->         
+
+         <!--%%[/* BEGIN: Module 2-col Stack */]%%-->
+         <div class="pb30 table">
+            <!--[if (gte mso 9)|(IE)]>
+            <table cellspacing="0" cellpadding="0" border="0" width="100%" align="center" role="presentation">
+            <tr>
+            <td valign="top" style="mso-padding-bottom-alt: 30px;">               
+               <table cellspacing="0" cellpadding="0" border="0" width="100%" align="center" role="presentation">
+               <tr>
+               <td valign="top">
+            <![endif]-->
+            <div class="td dt-w50p">
+               <img class="img-fw" alt="" src="https://placeholdit.imgix.net/~text?txtsize=28&bg=036648&txtclr=FFFFFF&txt=Image%20Left&w=320&h=200" width="320" height="200" border="0">
+            </div>
+            <!--[if (gte mso 9)|(IE)]>
+            </td>
+            <td bgcolor="#ffffff">
+            <![endif]-->
+            <div class="td dt-w50p vam pa20 blk-white">
+               <!--[if (gte mso 9)|(IE)]>
+               <table cellspacing="0" cellpadding="0" border="0" width="100%" align="center" role="presentation">
+               <tr>
+               <td valign="top" style="mso-padding-top-alt: 20px; mso-padding-bottom-alt: 20px; mso-padding-right-alt: 20px; mso-padding-left-alt: 20px;">
+               <![endif]-->               
+               <h3>2 Column Stack: Left Over Right.</h3>
+               <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+               <!--[if (gte mso 9)|(IE)]>
+               </td>
+               </tr>
+               </table>            
+               <![endif]-->                 
+            </div>
+            <!--[if (gte mso 9)|(IE)]>
+               </td>
+               </tr>
+               </table>
+            </td>
+            </tr>
+            </table>            
+            <![endif]-->
+         </div>
+         <!--%%[/* END: Module 2-col Stack */]%%-->
+
+         <!--%%[/* BEGIN: Module 2-col Reverse Stack */]%%-->
+         <div class="pb30 table">
+            <!--[if (gte mso 9)|(IE)]>
+            <table cellspacing="0" cellpadding="0" border="0" width="100%" align="center" role="presentation">
+            <tr>
+            <td valign="top" style="mso-padding-bottom-alt: 30px;">    
+               <table cellspacing="0" cellpadding="0" border="0" width="100%" align="center" role="presentation">
+               <tr>
+               <td valign="top">
+            <![endif]-->
+            <div class="tf dt-w50p">
+               <img class="img-fw" alt="" src="https://placeholdit.imgix.net/~text?txtsize=28&bg=036648&txtclr=FFFFFF&txt=Image%20Left&w=320&h=200" width="320" height="200" border="0">
+            </div>
+            <!--[if (gte mso 9)|(IE)]>
+            </td>
+            <td bgcolor="#ffffff">
+            <![endif]-->
+            <div class="td dt-w50p vam blk-white">
+               <!--[if (gte mso 9)|(IE)]>
+               <table cellspacing="0" cellpadding="0" border="0" width="100%" align="center" role="presentation">
+               <tr>
+               <td valign="top" style="mso-padding-top-alt: 20px; mso-padding-bottom-alt: 20px; mso-padding-right-alt: 20px; mso-padding-left-alt: 20px;">
+               <![endif]-->               
+               <div class="db pa20">
+                  <h3>2 Column Stack: Right Over Left.</h3>
+                  <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+               </div>
+               <!--[if (gte mso 9)|(IE)]>
+               </td>
+               </tr>
+               </table>            
+               <![endif]-->               
+            </div>
+            <!--[if (gte mso 9)|(IE)]>
+               </td>
+               </tr>
+               </table>
+            </td>
+            </tr>
+            </table>            
+            <![endif]-->
+         </div>
+         <!--%%[/* END: Module 2-col Reverse Stack */]%%-->
+
+         <!--%%[/* BEGIN: Module 3-col Stack */]%%-->
+         <div class="pb30 table">
+            <!--[if (gte mso 9)|(IE)]>
+            <table cellspacing="0" cellpadding="0" border="0" width="100%" align="center" role="presentation">
+            <tr>
+            <td valign="top" style="mso-padding-bottom-alt: 30px;">    
+               <table cellspacing="0" cellpadding="0" border="0" width="100%" align="center" role="presentation">
+               <tr>
+               <td valign="top" bgcolor="#ffffff">
+            <![endif]-->
+            <div class="td dt-w33p vam pa20 blk-white">
+               <!--[if (gte mso 9)|(IE)]>
+               <table cellspacing="0" cellpadding="0" border="0" width="100%" align="center" role="presentation">
+               <tr>
+               <td valign="top" style="mso-padding-top-alt: 20px; mso-padding-bottom-alt: 20px; mso-padding-right-alt: 20px; mso-padding-left-alt: 20px;">
+               <![endif]-->               
+               <h3>3 Column Stack: Left Over Right.</h3>
+               <p><strong>A</strong> Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+               <!--[if (gte mso 9)|(IE)]>
+               </td>
+               </tr>
+               </table>            
+               <![endif]-->                 
+            </div>
+            <!--[if (gte mso 9)|(IE)]>
+            </td>
+            <td valign="top" bgcolor="#ffffff">
+            <![endif]-->
+            <div class="td dt-w33p vam pa20 blk-white">
+               <!--[if (gte mso 9)|(IE)]>
+               <table cellspacing="0" cellpadding="0" border="0" width="100%" align="center" role="presentation">
+               <tr>
+               <td valign="top" style="mso-padding-top-alt: 20px; mso-padding-bottom-alt: 20px; mso-padding-right-alt: 20px; mso-padding-left-alt: 20px;">
+               <![endif]-->               
+               <h3>3 Column Stack: Left Over Right.</h3>
+               <p><strong>B</strong> Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+               <!--[if (gte mso 9)|(IE)]>
+               </td>
+               </tr>
+               </table>            
+               <![endif]-->    
+            </div>
+            <!--[if (gte mso 9)|(IE)]>
+            </td>
+            <td valign="top" bgcolor="#ffffff">
+            <![endif]-->
+            <div class="td dt-w33p vam pa20 blk-white">
+               <!--[if (gte mso 9)|(IE)]>
+               <table cellspacing="0" cellpadding="0" border="0" width="100%" align="center" role="presentation">
+               <tr>
+               <td valign="top" style="mso-padding-top-alt: 20px; mso-padding-bottom-alt: 20px; mso-padding-right-alt: 20px; mso-padding-left-alt: 20px;">
+               <![endif]-->             
+               <h3>3 Column Stack: Left Over Right.</h3>
+               <p><strong>C</strong> Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+               <!--[if (gte mso 9)|(IE)]>
+               </td>
+               </tr>
+               </table>            
+               <![endif]-->    
+            </div>
+            <!--[if (gte mso 9)|(IE)]>
+               </td>
+               </tr>
+               </table>
+            </td>
+            </tr>
+            </table>            
+            <![endif]-->
+         </div>
+         <!--%%[/* END: Module 3-col Stack */]%%-->
+
+         <!--%%[/* BEGIN: Module 3-col Reverse Stack */]%%-->
+         <div class="pb30 table">
+            <!--[if (gte mso 9)|(IE)]>
+            <table cellspacing="0" cellpadding="0" border="0" width="100%" align="center" role="presentation">
+            <tr>
+            <td valign="top" style="mso-padding-bottom-alt: 30px;">    
+               <table cellspacing="0" cellpadding="0" border="0" width="100%" align="center" role="presentation">
+               <tr>
+               <td valign="top" bgcolor="#ffffff">
+            <![endif]-->
+            <div class="td dt-w33p vam blk-white">
+               <!--[if (gte mso 9)|(IE)]>
+               <table cellspacing="0" cellpadding="0" border="0" width="100%" align="center" role="presentation">
+               <tr>
+               <td valign="top" style="mso-padding-top-alt: 20px; mso-padding-bottom-alt: 20px; mso-padding-right-alt: 20px; mso-padding-left-alt: 20px;">
+               <![endif]-->               
+               <div class="db pa20">
+                  <h3>3 Column Stack: Right Over Left.</h3>
+                  <p><strong>A</strong> Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+               </div>
+               <!--[if (gte mso 9)|(IE)]>
+               </td>
+               </tr>
+               </table>            
+               <![endif]-->                       
+            </div>
+            <!--[if (gte mso 9)|(IE)]>
+            </td>
+            <td valign="top" bgcolor="#ffffff">
+            <![endif]-->
+            <div class="td dt-w33p vam blk-white">
+               <!--[if (gte mso 9)|(IE)]>
+               <table cellspacing="0" cellpadding="0" border="0" width="100%" align="center" role="presentation">
+               <tr>
+               <td valign="top" style="mso-padding-top-alt: 20px; mso-padding-bottom-alt: 20px; mso-padding-right-alt: 20px; mso-padding-left-alt: 20px;">
+               <![endif]-->               
+               <div class="db pa20">
+                  <h3>3 Column Stack: Right Over Left.</h3>
+                  <p><strong>B</strong> Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+               </div>
+               <!--[if (gte mso 9)|(IE)]>
+               </td>
+               </tr>
+               </table>            
+               <![endif]-->  
+            </div>
+            <!--[if (gte mso 9)|(IE)]>
+            </td>
+            <td valign="top" bgcolor="#ffffff">
+            <![endif]-->
+            <div class="td dt-w33p vam blk-white">
+               <!--[if (gte mso 9)|(IE)]>
+               <table cellspacing="0" cellpadding="0" border="0" width="100%" align="center" role="presentation">
+               <tr>
+               <td valign="top" style="mso-padding-top-alt: 20px; mso-padding-bottom-alt: 20px; mso-padding-right-alt: 20px; mso-padding-left-alt: 20px;">
+               <![endif]-->                
+               <div class="db pa20">
+                  <h3>3 Column Stack: Right Over Left.</h3>
+                  <p><strong>C</strong> Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+               </div>
+               <!--[if (gte mso 9)|(IE)]>
+               </td>
+               </tr>
+               </table>            
+               <![endif]-->  
+            </div>
+            <!--[if (gte mso 9)|(IE)]>
+               </td>
+               </tr>
+               </table>
+            </td>
+            </tr>
+            </table>            
+            <![endif]-->
+         </div>
+         <!--%%[/* END: Module 3-col Reverse Stack */]%%-->
+
+         <!--%%[/* BEGIN: Module Background Image */]%%-->
+         <div class="pb30 table w100p">
+            <!--[if (gte mso 9)|(IE)]>
+            <table cellspacing="0" cellpadding="0" border="0" width="100%" align="center" role="presentation">
+            <tr>
+            <td align=“center" bgcolor=“#333333" background="http://image.s4.exct.net/lib/fe9215737c61027f76/m/1/1149d3f6-54ef-4b93-a4e9-f5594925e113.jpg" width=“700" height=“300" valign=“top">
+            <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:700px;height:300px;">
+            <v:fill type="tile" src="http://image.s4.exct.net/lib/fe9215737c61027f76/m/1/890c3e80-9811-4b5f-b68c-fdfb5cfbbef7.jpg" color="#333333" />
+            <v:textbox inset="0,120px,0,0">                 
+            <![endif]-->             
+            <div class="bg-img mb-td w100p vam tac" style="background:url('http://image.s4.exct.net/lib/fe9215737c61027f76/m/1/1149d3f6-54ef-4b93-a4e9-f5594925e113.jpg') no-repeat center top / cover;">
+               <!--[if (gte mso 9)|(IE)]>
+               <table cellspacing="0" cellpadding="0" border="0" width="100%" align="center" role="presentation">
+               <tr>
+               <td valign="middle" align="center">
+               <![endif]-->                  
+               <h3 class="color-alt">Background image.</h3>
+               <p class="color-alt">Here is some text on top of a background image.</p>
+               <!--[if (gte mso 9)|(IE)]>
+               </td>
+               </tr>
+               </table>            
+               <![endif]-->                 
+            </div>
+            <!--[if (gte mso 9)|(IE)]>
+            </v:textbox>
+				</v:rect>
+            </td>
+            </tr>
+            </table>
+            <![endif]-->             
+         </div>
+         <!--%%[/* END: Module Background Image */]%%-->         
+
+         <!--%%[/* END: MODULES GO HERE */]%%-->
+
+         <!--[if (gte mso 9)|(IE)]>
+         </td>
+         </tr>
+         </table>
+         <![endif]-->         
+      </div>
+
+      <!--[if (gte mso 9)|(IE)]>
+      </td>
+      </tr>
+      </table>
+      <![endif]-->
+   </div>
+   <!--%%[/* END: Main Container */]%%-->
+
+</body>
+
+<custom name="opencounter" type="tracking" />
+
+</html>
